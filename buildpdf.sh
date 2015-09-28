@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# run : ./buildpdf.sh smooth
 
 pdflatex $1.tex
 bibtex   $1.aux
