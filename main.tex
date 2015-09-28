@@ -1,0 +1,94 @@
+\documentclass{article}
+
+\usepackage{textcomp}
+\usepackage{amsmath}    % need for subequations
+\usepackage{graphicx}   % need for figures
+\usepackage{verbatim}   % useful for program listings
+\usepackage{color}      % use if color is used in text
+\usepackage{subfigure}  % use for side-by-side figures
+\usepackage{hyperref}   % use for hypertext links, including those to external documents and URLs
+\usepackage{cite}
+\usepackage{float}
+\usepackage{natbib}
+\usepackage[utf8]{inputenc}
+\usepackage{simplemargins}
+\usepackage{setspace}
+\usepackage{multirow}
+\usepackage{url}
+
+\usepackage{etoolbox}
+\usepackage{lipsum}
+
+\setallmargins{1in}
+\onehalfspacing
+
+\linespread{1.8} % line space
+
+\patchcmd{\thebibliography}{\section*}{\section*}{}{}
+
+
+
+\usepackage{xcolor}
+\hypersetup{
+    colorlinks,
+    linkcolor={red!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
+
+
+
+
+
+\title{Seismic Hazard Estimation of Northern Iran Using Smoothed Historical Seismicity}
+
+
+\begin{document}
+
+\maketitle
+
+
+\newpage
+
+\begin{center}
+\textbf{Naeem Khoshnevis$^*$} \\ Graduate Research Assistant \\  University of Memphis \\ Center for Earthquake Research and Information \\   nkhshnvs@memphis.edu\\   3890 Central Ave. Memphis TN 38152 \\ Phone (901) 678-2007\\
+\vspace{10 mm}
+ \textbf{Shima Azizzadehroodpish}  \\ Graduate Research Assistant \\ University of Memphis \\ Center for Earthquake Research and Information \\ szzzdhrd@memphis.edu\\  
+\vspace{10 mm}
+\textbf{Chris H Cramer}   \\ Research  Associate  Professor \\  University of Memphis \\ Center for Earthquake Research and Information \\ ccramer@memphis.edu \\
+\vspace{10 mm}
+\textbf{Ricardo Taborda}   \\  Assistant  Professor \\  University of Memphis \\ Department of Civil Engineering and \\ Center for Earthquake Research and Information \\ rtbrdros@memphis.edu\\
+
+\end{center}
+
+
+
+
+\newpage
+
+
+\begin{abstract}
+\input{abstract}
+\end{abstract}
+
+
+\smallskip
+\noindent \textbf{Keywords: } Seismic hazard - Spatially smoothed seismicity - Northern Iran
+
+
+\input{content}
+
+
+\newpage
+
+
+{
+\renewcommand{\bibname}{}
+\bibliographystyle{ascelike}
+\bibliography{PSHA}
+}
+
+
+
+\end{document}
+
