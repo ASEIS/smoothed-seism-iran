@@ -1,11 +1,11 @@
 \section{Methodology for Hazard calculation}
 
-To calculate the seismic hazard, we use spatially smoothed seismic hazard analysis \citep{Frankel1995}. In this model, seismic events are spatially gridded to cells. We are attempting to assess the relative likelihood of moderate earthquakes ($M_w > 4.5$), which cause structural damage. According to \citet{Frankel1995}, moderate earthquakes generally occur in areas that there have been significant numbers of events of magnitude 3 and above. Therefore, these events provide a reasonable guide to where moderate earthquakes will most likely occur. Since the catalog's completeness for $M3+$ and $M4+$ is different, we use two magnitude completeness range for less than $M_w5$ . Category of 5+ and others (M6+ and M7+) assume that future $M_w4.5$ events will occur near where they have occurred in the past. \\
+To calculate the seismic hazard, we use spatially smoothed seismic hazard analysis \citep{Frankel1995}. In this model, seismic events are spatially gridded to cells. We are attempting to assess the relative likelihood of moderate earthquakes ($M_w > 4.5$), which cause structural damage. According to \citet{Frankel1995}, moderate earthquakes generally occur in areas that there have been significant numbers of events of magnitude 3 and above. Therefore, these events provide a reasonable guide to where moderate earthquakes will most likely occur. Since the catalog's completeness for $M3+$ and $M4+$ is different, we use two magnitude completeness range for less than $M_w5$ . Category 5+ and others (M6+ and M7+) assume that future $M_w4.5$ events will occur near where they have occurred in the past. \\
 \noindent
-According to \citep{BHRC2014}, $M_w5$ is considered as a threshold magnitude to structural damage. In the smoothed seismicity method, the model uses each event location as a point source, hence $M_w4.5$ could be damaging earthquake if it occurs very close to the structure. In this study, in order to consider the probabilistic seismic hazard of both models, we defined two models based on $M_w5$ and $M_w4.5$ as a threshold magnitude for seismic hazard calculation with weight of 0.7 and 0.3, respectively.\\
+According to Building and Housing Research Center  \citep{BHRC2014}, $M_w5$ is considered as a threshold magnitude to structural damage. In the smoothed seismicity method, the model uses each event location as a point source, hence $M_w4.5$ could be damaging earthquake if it occurs very close to the structure. In this study, in order to consider the probabilistic seismic hazard of both models, we defined two models based on $M_w5$ and $M_w4.5$ as a threshold magnitude for seismic hazard calculation. \\
 \noindent
-According to \citet{Frankel1995}, we count the number of earthquake $n_i$ with magnitude above $M{_R{_e{_f}}}$ in each cell of a grid with spacing of $0.1^{\circ}$ in both latitude and longitude (about 11 km). This count shows the maximum likelihood estimate of $10^a$ for that mentioned cell \citep{Weichert1980, Bender1983} for earthquakes with magnitude greater than $M{_R{_e{_f}}}$. Applying the Herrmann formula \citep{Herrmann1977}, the values of $n_i$ are converted from cumulative values (number of events above $M{_R{_e{_f}}}$) to incremental values (number of events from $M{_R{_e{_f}}}$ to $M{_R{_e{_f}}} +\Delta M$ ). The grid of $n_i$ values is spatially smoothed by multiplying by a Gaussian function with correlation distance c. For each cell $i$, the smoothed value $\tilde{n}_i$ is obtained from \citet{Frankel1995}
-
+\noindent
+In order to calculate the annual rate ($\lambda$) of exceeding ground motion (u) at a specific site, according to \citet{Frankel1995}, first we need to divide the region into cells (0.1*0.1) and count all earthquake events which are bigger than $M_{ref}$ in each cell. We use Herrmann formula \citep{Herrmann1977} to convert the cumulative (i.e. number of events bigger than $M_{ref}$) values to incremental (i.e. number of events from$M_{ref}$ to $M_{ref}+\Delta_m$) values. Using Gaussian function we smooth the number of events in each cell. The smoothed value $\tilde{n}_i$ is obtained from
 
 \begin{equation}
 \tilde{n_i}=\frac{\sum_{j} n_{j} e^{\frac{-\Delta_{ij}^{2}}{c^2}}}{\sum_{j} e^{\frac{-\Delta_{ij}^{2}}{c^2}}},
@@ -14,15 +14,26 @@ According to \citet{Frankel1995}, we count the number of earthquake $n_i$ with m
 \noindent
 where,  $\tilde{n}_i$  is normalized to preserve the total number of events. $\Delta{_i{_j}}$ is the distance between the $i{_t{_h}}$ and $j{_t{_h}}$ cell. The sum is calculated over cells $j$ within a distance of $3c$ of cell $i$.\\
 \noindent
-For a grid of sites and by using $\tilde{n}_i$ from Eq. (1), the annual probability of exceeding specified ground motions is calculated. For each site, the values of $\tilde{n}_i$ are binned by their distance from that site, in a way that $N_k$ denotes the total of $\tilde{n}_i$ values for cells within a certain distance increment of the site. Now the annual rate $\lambda (u> u_0 )$ of exceeding ground motion $u_0$ at a specific site is determined from a sum over distance and magnitude \citet{Frankel1995}:
-
-
+Then we discretized the magnitude and distance in uniform bins and get the total number of Normalized, smoothed events ($N_k$) inside the certain distance increment.
+Having ($N_k$) and $T$ (catalog time duration that we calculated $N_k$ within that duration), we can calculate the annual rate  $\lambda (u> u_0 )$ of exceeding ground motion according to 
 
 \begin{equation}
 \lambda(u>u_{0}) = \sum_{k}\sum_{l}10^{[log(\frac{N_{k}}{T}-b(M_l-M{_r{_e{_f}}}))]} p(u>u_0 | D_k ,M_l),
 \end{equation}
-
 \noindent
-where $k$ is the index for the distance bin, and $l$ is the index for the magnitude bin; $T$ is the time in years of the earthquake catalog used to determine $N_k$. Annual rate of earthquakes in the distance bin $k$ and magnitude bin $l$ is the first factor in the summation. The $b-value$ is considered uniform throughout most of the area. $P(u>u_0 | D_k,M_l )$ is the probability that for an earthquake at distance $D_k$ with magnitude $M_l$, u at the site will exceed  ground motion $u_0$. This probability depends on the attenuation relation and the standard deviation (aleatory variability) of the ground motion for any specific distance and magnitude \citep{Frankel1995}
+where $k$ and $l$ are denoted as index of distance and magnitude bin. $P(u>u_0 | D_k,M_l )$ is the probability that for an earthquake at distance $D_k$ with magnitude $M_l$, u at the site will exceed  ground motion $u_0$. This probability depends on the attenuation relation and the standard deviation (aleatory variability) of the ground motion for any specific distance and magnitude \citep{Frankel1995}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
