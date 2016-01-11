@@ -1,18 +1,6 @@
 \newpage
 \section{Analysis Parameters}
 \subsection{Magnitude Interval}
-
-In this study we use two sets of data, i.e., historical and instrumental seismic catalogs. We use the historical catalog which is converted into moment magnitude and reported by \citep{Karimiparidari2013}. Fig.~\ref{fig:historical} shows the historical earthquakes (pre-1900) in northern Iran. The instrumental data has been reported mainly by the International Institute of Earthquake Engineering and Seismology of Iran \citep{IIEES}, and are reported in $M_L$ magnitude type. In this study we use the relationship that proposed by \citet{Karimiparidari2013}, to convert local magnitude into moment magnitude. 
-
-\begin{figure} [H]
-\centering
-\includegraphics[scale=0.8]{figures/pdf/Figure2.pdf} 
-\caption{Historical earthquakes of Iran (pre 1900). Different colors represent different year of occurrences and size of circles are proportional to the earthquake magnitude. }
-\label{fig:historical}
-\end{figure}
-
-
-
 \subsection{Minimum Magnitude}
 \subsection{Attenuation Relationship}
 The choice of a ground motion attenuation model is of great importance since attenuation has proven to be a highly influential factor of seismic hazard. \citet{Zafarani2014} used 163 free-field acceleration time histories recorded at epicentral distance of up to 200 km from 32 earthquakes to investigate the predictive capabilities of the local, regional, and next generation attenuation (NGA) ground-motion prediction equations and determined their applicability for northern Iran. After evaluating different Ground Motion Prediction Equations, \citet{Kalkan2004}, \citet{Chiou2008}, and \citet{Boore2008} represented suitable performance for  PGA  with LLH (Log-Likelihood method) score of 1.54, 1.55, and 1.59. Mean of the mentioned attenuation relationships (not shown here), are very close together, especially at higher magnitude. Using \citet{Scherbaum2009} approach and \citet{Zafarani2014} coefficients we calculated the logic tree weights as 0.3376, 0.3354, and 0.3270, respectively. Getting close mean values and logic tree weights, in order to consider the epistemic uncertainty, instead of using several GMPEs we use the top rank GMPE (i.e.  \citet{Kalkan2004} ) with  $\pm$ standard deviation with weight of 0.2 (for each of standard deviation branches) and 0.6 for the mean value.    \\
@@ -35,7 +23,7 @@ For each of the three seismic regions, Gutenberg-Richter parameters and Max magn
 \noindent
 Following the \citet{Karimiparidari2013}, we assume the catalog is complete for earthquakes with magnitude 4.5, 4.4, and 4.5 for Azerbaijan, Alborz and Kopeh-Dagh tectonic seismic regions, respectively. The completeness of each region can be seen easily from the scatter plot of completeness test. 
 
-\begin{table}[h]
+\begin{table*}[!ht]
 \centering
 \caption{Seismicity parameters for three tectonic seismic regions.}
     \begin{tabular}{ccccc}
@@ -45,7 +33,7 @@ Following the \citet{Karimiparidari2013}, we assume the catalog is complete for 
     Kopeh Dagh & 0.97  $\pm$ 0.04 & (1.716  $\pm$ 0.243) & 7.67  $\pm$ 0.26           & 7.6          \\
     \end{tabular}
   
-\end{table}
+\end{table*}
 
 
 \subsection{Catalogue Completness}
