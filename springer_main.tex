@@ -1,0 +1,95 @@
+\RequirePackage{fix-cm}
+
+%
+%\documentclass{svjour3}                     % onecolumn (standard format)
+%\documentclass[smallcondensed]{svjour3}     % onecolumn (ditto)
+%\documentclass[natbib,smallextended]{svjour3}       % onecolumn (second format)
+
+\documentclass[natbib,twocolumn]{svjour3}          % twocolumn
+%
+\smartqed  % flush right qed marks, e.g. at end of proof
+%
+\usepackage{graphicx}
+\usepackage[a4paper]{geometry}
+\usepackage{xcolor}
+%\usepackage[margin=1in]{geometry}
+
+%
+% \usepackage{mathptmx}      % use Times fonts if available on your TeX system
+ \usepackage{aps-bibstyle}  % use this style if you upload to .tex file only a part of Bibtex created bbl.
+%
+% insert here the call for the packages your document requires
+%\usepackage{latexsym}
+% etc.
+%
+% please place your own definitions here and don't use \def but
+% \newcommand{}{}
+%
+% Insert the name of "your journal" with
+ \journalname{Journal of Seismology}
+%
+% Definitions for the journal names
+\newcommand{\aap}{{Astron. Astrophys.}}
+\newcommand{\apj}{{Astrophys. J.}}
+\newcommand{\grl}{{Geophys. Res. Lett.}}
+\newcommand{\solphys}{{Solar Phys.}}
+%
+\begin{document}
+
+
+\title{ Seismic Hazard Estimation of Northern Iran Using Smoothed Historical Seismicity}
+
+\author{Naeem Khoshnevis         \and
+             Shima Azizzadehroodpish \and
+             Chris H Cramer \and
+             Ricardo Taborda}
+
+%\authorrunning{Short form of author list} % if too long for running head
+
+\institute{Naeem Khoshnevis \at
+               University of Memphis \\
+               Center for Earthquake Research and Information \\
+               3890 Central Ave. Memphis TN 38152 \\
+              Tel.: +1(901) 678-2007\\
+               \email{nkhshnvs@memphis.edu}        
+           \and
+           Shima Azizzadehroodpish \at
+                            University of Memphis \\
+               Center for Earthquake Research and Information \\
+               Department of Civil Engineering \\
+             \email{szzzdhrd@memphis.edu}        
+\and
+Chris H Cramer \at
+                            University of Memphis \\
+               Center for Earthquake Research and Information \\
+               \email{ccramer@memphis.edu}    
+\and
+Ricardo Taborda \at
+                            University of Memphis \\
+               Center for Earthquake Research and Information \\
+               \email{rtbrdros@memphis.edu}   
+}
+
+\date{Received: date / Accepted: date}
+
+
+\maketitle
+
+\begin{abstract}
+\input{abstract}
+\keywords{Seismic hazard \and Spatially smoothed seismicity \and Northern Iran}
+
+\end{abstract}
+
+\input{content}
+
+\newpage
+\bibliographystyle{aps-nameyear}      % American Physical Society (APS) style, author-year citations
+\bibliography{PSHA}                           % name your BibTeX data base
+\nocite{*}
+
+
+
+\end{document}
+
+
