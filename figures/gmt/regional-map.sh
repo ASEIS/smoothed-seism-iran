@@ -28,14 +28,18 @@ LATMAX=42
 
 REGION=$LONMIN/$LONMAX/$LATMIN/$LATMAX
 
+PROJ=M5i
+
 # ------------------------------------------------------------------------------
 
-gmt pscoast -R${REGION} -JM -Slightblue -G255/211/155 -Dh -W0.25p -B4 -N1/0.25p --FORMAT_GEO_MAP=dddF -V -P -K > ${PSNAME}
+gmt pscoast -R${REGION} -J${PROJ} -Slightblue -G255/211/155 -Dh -W0.25p -B4 -N1/0.25p -Ba4f2g2 -V -P -K > ${PSNAME}
+
+ # --FORMAT_GEO_MAP=dddF
 
 # Region of Interest
 # ------------------------------------------------------------------------------
 
-gmt psxy -W0.5 -R -JM -V -O >> ${PSNAME} << END
+gmt psxy -W0.5 -R -J${PROJ} -V -O >> ${PSNAME} << END
 43.5	34
 43.5	40
 61.5    40
