@@ -3,3 +3,9 @@
 .DS_Store
 latex-springer
 main.pdf
+
+figures/gmt/*.eps
+figures/gmt/*.pdf
+figures/gmt/*.ps
+figures/gmt/*.conf
+figures/gmt/*.history
