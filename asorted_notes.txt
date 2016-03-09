@@ -1,0 +1,70 @@
+=========
+
+The main reason for the discrepancies is the location of the source. We get smaller results because we don't consider many potential locations for earthquakes. We don't consider them whether there isn't any recorded earthquake or it was not considerable amount of them.
+
+I attached the log-log plot.
+
+About the abstract:
+
+We are using a new method that helps to reduce the uncertainties in recognizing the seismic source. We are using a completely different method which is based on the recorded data, not actual faults. In each cell we find the number of earthquake in a certain intervals and based on the numbers we define the "a" value. Then we smoothed the a value through guassian function in 30 km distance. So this smoothing procedure will smooth the sharp values (e.g. very high and low values.) We are not interested in the low values but the decrease in high values will decrease the hazard level. 
+
+But why we say we need to use this method? Because it is probable that we can't truly understand the geological feature of the area. If the method that we get is close to the other studies (which is based on fault), we can say we understand the region and the seismicity rate is what we expect. If we get considerable lower value, it suggests the idea that we haven't had enough earthquake in that region so there are two options, 1) There is no fault, 2) There is a fault but it was not active enough. 
+
+We propose to use this method alongside the other methods,  to cover the deficiencies of each method. This is the procedure that Frankel1995 (SRL) for US and Kalkan2009 (BSSA) for Turkey used.
+
+==============
+
+Zafarani and Mousavi 2014 found that among several attenuation relationships there was one that worked best for northern Iran.  Right? OK... which is it?  I just read the abstract of that paper and couldn't tell from there.  Could you please tell me which GMPE in particular is the one they found to be the best one? Do you have a reference for that GMPE? I assume it was one introduced by a different author.
+
+Cheers,
+
+--Ricardo
+
+That is right.
+
+It is Kalkan and Gulkan(2004).
+
+It is not abvious from abstract because they provided results for 8 different periods including PGA. We only interested in the results for PGA. Please see Table 5, PGA(T=0.0 s). The best GMPE is Kalkan and Gulkan (2004).
+
+Sincerely,
+Naeem
+
+===============
+
+I have done that for all citable studies in the Discussion of results' section.
+
+Those papers are:
+
+Tavakoli and Ghafory-Ashtiany (1999),
+Ghodrati Amiri et al (2003),
+Ghodrati Amiri and Amrei(2008),
+Vafaie et al (2011),
+Rahgozar et al (2012),
+Abdi et al (2013),
+Abdollahzadeh et al(2014)
+Golara(2014),
+Boostan (2015)
+
+Please see the discussion and results section for the summary. I think each one of them has about two sentences. I can't pick five of them because they are written for different places in northern Iran. 
+
+===============
+
+In order to use this sentence...
+
+\citet{Nemati2015} studied the most recent 200 years' seismicity in northern Iran. The frequency of shocks vary widely from one mainshock per 6 years (0.17 event/ year) for the Azerbaijan region to 13 earthquakes per 4 years for the Kopeh-Dagh (3.25 event/year) region.
+
+...it would be good to know the magnitude of what is said here to be a "main shock".  Any main shock? or greater than certain M?
+
+--Ricardo
+
+In the Nemati(2015) , Section 2, data:
+
+The answer is  Mw > 5;
+
+Totally, 325 moderate and large earthquakes (≥5.0) were investigated for the seismicity rate assessments in Alborz (131 events), Azarbaijan (83 events), and also Kopeh Dagh (111 events) seismotectonic provinces in which 61 earthquakes in Alborz, 32 events in Azarbaijan, and also 37 earthquakes in Kopeh Dagh areas are associated with macroseismic data.
+
+Sincerely,
+Naeem
+
+===============
+

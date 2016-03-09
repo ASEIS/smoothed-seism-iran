@@ -6,14 +6,14 @@ clear
 
 gmt gmtset FONT_LABEL               = 12
 
-# gmt gmtset MAP_FRAME_PEN            = 0.75p,black
-# gmt gmtset MAP_FRAME_WIDTH          = 0.75p
-# gmt gmtset MAP_TICK_PEN_PRIMARY     = 0.75p
-# gmt gmtset MAP_GRID_PEN_PRIMARY     = 0.75p
-# gmt gmtset MAP_TICK_PEN_PRIMARY     = 0.75p
-# gmt gmtset MAP_TICK_LENGTH_PRIMARY  = 6p/3p
-# gmt gmtset MAP_LABEL_OFFSET         = 8p
-# gmt gmtset MAP_ANNOT_OFFSET_PRIMARY = 5p
+gmt gmtset MAP_FRAME_PEN            = 0.75p,black
+gmt gmtset MAP_FRAME_WIDTH          = 0.75p
+gmt gmtset MAP_TICK_PEN_PRIMARY     = 0.75p
+gmt gmtset MAP_GRID_PEN_PRIMARY     = 0.75p
+gmt gmtset MAP_TICK_PEN_PRIMARY     = 0.75p
+gmt gmtset MAP_TICK_LENGTH_PRIMARY  = 6p/3p
+gmt gmtset MAP_LABEL_OFFSET         = 8p
+gmt gmtset MAP_ANNOT_OFFSET_PRIMARY = 5p
 
 # Set script constants
 # ------------------------------------------------------------------------------
@@ -28,18 +28,17 @@ LATMAX=42
 
 REGION=$LONMIN/$LONMAX/$LATMIN/$LATMAX
 
-PROJ=M5i
-
 # ------------------------------------------------------------------------------
 
-gmt pscoast -R${REGION} -J${PROJ} -Slightblue -G255/211/155 -Dh -W0.25p -B4 -N1/0.25p -Ba4f2g2 -V -P -K > ${PSNAME}
+gmp psmap 
+gmt pscoast -R${REGION} -JX5id/3id -BWNes+a4f2 -Slightblue -G255/211/155 -Dh -W0.25p -N1/0.25p -V -P -K > ${PSNAME}
 
- # --FORMAT_GEO_MAP=dddF
+# --FORMAT_GEO_MAP=dddF
 
 # Region of Interest
 # ------------------------------------------------------------------------------
 
-gmt psxy -W0.5 -R -J${PROJ} -V -O >> ${PSNAME} << END
+gmt psxy -W0.5 -R -JX5i/3i -BWNes -V -O >> ${PSNAME} << END
 43.5	34
 43.5	40
 61.5    40
@@ -50,13 +49,13 @@ END
 # Creating PDF
 # ------------------------------------------------------------------------------
 
-gmt ps2raster ${PSNAME} -Tf -Au0.1c
+gmt ps2raster ${PSNAME} -Tf #-Au0.1c
+rm ${PSNAME}
 
 # Opening PDF
 # ------------------------------------------------------------------------------
 
 open -a Adobe\ Acrobat\ Pro.app ${OUTNAME}.pdf
-
 
 
 # PROJ=-JM16
