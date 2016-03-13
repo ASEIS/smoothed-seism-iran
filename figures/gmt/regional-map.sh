@@ -108,6 +108,9 @@ END
 
 gmt ps2raster ${PSNAME} -Tf -Au0.25c
 rm ${PSNAME}
+rm mytopo.grad
+rm mytopo.hist
+rm mytopo.norm
 
 # Opening PDF
 # ------------------------------------------------------------------------------
@@ -115,21 +118,3 @@ rm ${PSNAME}
 open -a Adobe\ Acrobat\ Pro.app ${OUTNAME}.pdf
 
 
-# PROJ=-JM16
-# MOREPS=-K
-# CONTINUEPS="-K -O"
-# ENDPS=-O
-# DATASET=9
-# DATAGRID=-I30c
-# LINE=-W1
-
-# grdraster $DATASET -G$world.grd $DATAGRID -R$REGION -V
-# CPTFILE=/usr/local/GMT4.5.7/share/cpt/GMT_globe.cpt
-# TOPOILLUM=220
-
-# grdgradient $world.grd -A$TOPOILLUM -GETOPO5.intns -N2 -V  # in this case Dataset = 9
-# #grdgradient $world.grd -A$TOPOILLUM -GETOPO30s.intns -N2 -V
-
-# grdimage $world.grd -IETOPO5.intns -C$CPTFILE -R$REGION $PROJ -N2   -K  -Y1 -X8  >  $0.ps
-
-# pscoast -R$REGION $PROJ -N1 -B10f5/10f5  -Lf45/23/23/1000 -K -O -W2 >> $0.ps
