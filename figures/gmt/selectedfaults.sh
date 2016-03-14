@@ -22,7 +22,7 @@ gmt gmtset MAP_ANNOT_OFFSET_PRIMARY 5p
 # Set script constants
 # ------------------------------------------------------------------------------
 
-OUTNAME=selectedquakes
+OUTNAME=selectedfaults
 PSNAME=${OUTNAME}.ps
 
 # Top Map - Notable
