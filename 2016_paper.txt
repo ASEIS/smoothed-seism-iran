@@ -50,6 +50,6 @@ Notes from Khodaverdian et al. (2016)
 - We used 1 attenuation relationship, as well as standard deviation for each one 
 - RT: I do not understand the second part of this sentence
 
-+ The PGA varies from 0.05 g to 0.41g (475) and 0.09 to 0.81g (2475).
++ The PGA varies from 0.05 g to 0.41g (475-year return period) and 0.09 to 0.81g (2475-year return period).
 - We got ... ???
 - RT: What are the values in the parentheses ???
