@@ -1,47 +1,100 @@
 
 \section{Approach to Seismic Hazard}
 
-There have been multiple efforts to estimate seismic hazard for Iran. A brief report on the most recent review of seismic hazard studies used for composing the hazard zoning map of Iran, as included in the current version of the Iranian seismic code \citep{BHRC2014}, can be found in \citet{Moinfar_2012_WCEE}. Other previous efforts include, for instance, the work by \citet{Tavakoli1999}, who presented iso-acceleration contour lines and seismic hazard zonation for Iran based on known major fault-lines and area-source models; and the results obtained by \citet{Ghodrati2003}, who presented a refined hazard assessment for the metropolitan area of Tehran using a logic tree approach to combine results from three attenuation relationships. 
+There have been multiple assessments of seismic hazard for Iran. A brief report on the most recent review done to define the hazard zoning map of Iran included in the Iranian seismic code \citep{BHRC2014} can be found in \citet{Moinfar_2012_WCEE}. Other previous efforts include, for instance, the work of \citet{Tavakoli1999}, who presented iso-acceleration contour lines and seismic hazard zonation for Iran based on known major fault-lines and area-source models; the results obtained by \citet{Ghodrati2003}, who presented a refined hazard assessment for the metropolitan area of Tehran using a logic tree approach to combine results from three attenuation relationships; and the recent study by \citet{Khodaverdian_2016_BSSA}, who used a smoothed seismicity approach to estimate spatially variable seismicity parameters for the whole country.
 
-More recently, \citet{Khodaverdian_2016_BSSA} used a smoothed seismicity approach to estimate spatially variable seismicity parameters $a$ and $b$ \citep{Gutenberg1944} and compose seismic hazard maps for the whole country. Here, we also use a smoothed seismicity approach, but place our emphasis on northern Iran and use spatially variable $a$-values but seismic zone-specific $b$-values. The smoothed seismicity approach addres\-ses the aleatoric uncertainty of future earthquake locations by using the contribution of the background regional seismicity in combination with a smoothing (Gaussian) function. The smoothing takes place over spatial grid-cells which contribute to and borrow information from neighboring cells about earthquake occurrence, and thus eliminates the need for specific source locations. This method has been used successfully in different regions around the world including Alaska, California, Hawaii, Italy, Turkey \citep[e.g.,][]{Cao1996, Klein2001, Akinci2004, Kalkan2009, Moschetti2014}.
+Once a seismic catalog has been defined, the second most important step is precisely the definition of the seismicity parameters $a$ and $b$ used in the Gutenberg-Richter recurrence relation 
+% 
+\begin{equation}
+	\log_{10} N = a - b M \, ,
+\end{equation}
+% 
+\noindent
+where $N$ is the number of earthquakes with magnitude greater than or equal to $M$, $a$ accounts for the number of earthquakes that occur within a given region, and $b$ is a measure of the occurrence of earthquakes relative to magnitude \citep{Gutenberg1944}. These parameters can be assumed constant or variable depending on the approach used. 
 
-In particular, we use the smoothed seismicity method introduced by \citet{Frankel1995}. In this approach, the region of interest is divided into regular-size grid cells. Then, the number of events within each cell of magnitude greater than a given reference value $M_{\mathrm{ref}}$ are counted.
+In this study we use the smoothed seismicity method introduced by \citet{Frankel1995}. This method has been used successfully in different regions around the world including Alaska, California, Hawaii, Italy, Turkey \citep[e.g.,][]{Cao1996, Klein2001, Akinci2004, Kalkan2009, Moschetti2014}. In it, the $b$-value is usually assumed constant within a given seismic zone of ``homogeneous'' seismogenic characteristics, whereas $a$ is varied spatially according to the cataloged occurrence of earthquakes. The spatial variation of $a$ is defined based on dividing the region of interest into regular-size grid cells. The parameter $a$ is determined based on the number of events $n_i$ within each cell $i$ of magnitude greater than a reference value $M_{\mathrm{ref}}$, and discretized in different magnitude ranges (or bins). The number of earthquakes within each cell is then smoothed spatially taking into account the values of neighboring cells using a Gaussian function. In essence, the smoothed seismicity approach addresses the aleatoric uncertainty of future earthquake locations by using a weighted contribution of the background regional seismicity, and thus eliminates the need for knowledge about specific fault locations.
 
-seismic events grouped within spatially gridded cells 
+In this study we discretize the region of interest into a regular grid with cells of size 0.1\textdegree{} $\times$ 0.1\textdegree{} (in longitude and latitude). The parameter $a$ for each cell is obtained based on the information in the seismic catalog described in the previous section. Following \citet{Frankel1995}, $n_i$ is smoothed using the normalized Gaussian function
+% 
+\begin{equation}
+	\tilde{n_i} = \frac
+		{ \sum_{j} n_{j} \exp ( \frac{ -\Delta_{ij}^{2} }{ c^2 } ) }
+		{ \sum_{j} \exp ( \frac{ -\Delta_{ij}^{2} }{ c^2 } ) }
+	\, ,
+	\label{eq:nnorm}
+\end{equation}
+% 
+where $\tilde{n}_i$ is the smoothed, normalized number of events in cell $i$, $\Delta_{ij}$ is the distance between the $i$-th and $j$-th cells, and $c$ is the correlation distance. We use a correlation distance of 30 km. The summations in (\ref{eq:nnorm}) are calculated over the number of $j$ cells within a distance $3c$ from the $i$-th cell. It should be noted that in this process we convert the cumulative number of events to incremental values following \citet{Herrmann1977}. We also note that according to \citet{Frankel1995}, moderate earthquakes generally occur in areas where there have been significant numbers of events with magnitudes $M \geq 3$, thus our interest in having complemented the earthquake catalog for events above this threshold.
 
+In turn, we consider the $b$-values to be constant within each seismic zone as delimited in Fig.~\ref{fig:iran}. Details about the calculation of the $b$-value for each zone are provided below. By contrast, in the recent work by \citet{Khodaverdian_2016_BSSA}, the authors computed spatially-variable $b$-values within super-grid cells of size 1\textdegree{} $\times$ 1\textdegree{} and $a$-values within the usual grid cells of size 0.1\textdegree{} $\times$ 0.1\textdegree{}. While this approach is novel in the sense that it also grids $b$-values, these super-cells may easily cross over zones of different seismogenic characteristics, and thus may not be faithful to the nature of earthquakes within any given zone. Admittedly, these are subjective decisions and any reasonable choice may be valid and within the margins of the associated epistemic uncertainty.
 
-%We are attempting to assess the relative likelihood of moderate earthquakes ($M_w > 4.5$), which cause structural damage. According to \citet{Frankel1995}, moderate earthquakes generally occur in areas that there have been significant numbers of events of magnitude 3 and above. Therefore, these events provide a reasonable guide to where moderate earthquakes will most likely occur. Since the catalog's completeness for $M_w > 3$ and $M_w > 4$ are different, we use two magnitude completeness range for less than $M_w 5$ . Earthquake greater than magnitude 5, most probably will occur near where they have occurred in the past.
+Last, the annual rate $\lambda$ of exceeding a reference ground motion $u_o$ is defined by
+% 
+\begin{align}
+	\lambda & \left( u > u_o \right) = \nonumber \\
+		& \sum_{k} \sum_{l} 10^{ {}^{ \left[ \log \left( \frac{ N_{k} }{ T } \right) - b \left( M_l - M_{\mathrm{ref}} \right) \right] } }
+		P \left( u > u_o | D_k , M_l \right)
+		\, .
+	\label{eq:exceed}
+\end{align}
+% 
+Here, the values of $\tilde{n}_i$ have been previously binned by their distance from the site of interest, $N_k$ is the total of $\tilde{n}_i$ values for cells within a certain bin distance, $T$ is the time in years used to determine $N_k$, and $k$ and $l$ are the indexes of the distance and magnitude bins, respectively. $P ( u > u_o | D_k , M_l )$ is the probability of $u$ exceeding $u_o$ given an earthquake of magnitude $M_l$ at a distance $D_k$ \citep{Frankel1995}.
 
+It is clear from (\ref{eq:exceed}) that the hazard calculations depends also on the choice of an attenuation relationship to obtain predict the level of ground motion at a site ($u$) for any given earthquake. In the following two sections we describe how we obtained the $b$-values for the different seismic zones influencing the hazard in northern Iran and our choice of a suitable attenuation relationship (ground motion prediction equation).
 
 
 % *********************************************************************************************************************
+% PENDING TO USE
+% *********************************************************************************************************************
+
+% We are attempting to assess the relative likelihood of moderate earthquakes ($M_w > 4.5$), which cause structural damage. 
+
+% Since the catalog's completeness for $M_w > 3$ and $M_w > 4$ are different, we use two magnitude completeness range for less than $M_w 5$. 
+
+% Earthquake greater than magnitude 5, most probably will occur near where they have occurred in the past.
+
+% According to Building and Housing Research Center \citep{BHRC2014}, $M_w 5$ is considered as a threshold magnitude for onsetting the structural damage. 
+
+% In the smoothed seismicity method, the model uses each event location as a point source, hence $M_w 4.5$ could be damaging earthquake for old masonry buildings or even engineering building if it is very close to it, 
+
+% in this study, in order to consider the probabilistic seismic hazard, we defined two models based on $M_w 5$ and $M_w 4.5$ as a threshold magnitude for seismic hazard calculation.
+
+% *********************************************************************************************************************
+% ALREADY USED
 % *********************************************************************************************************************
 
 % Occurrence of devastating historical earthquake and also essential needs for constructing new buildings and infrastructures inspired researchers to study the seismic hazard of northern Iran from different points of view. Dividing Iran into 20 tectonic seismic regions, \citet{Tavakoli1999} prepared iso-acceleration contour lines and seismic hazard zonation for return periods of 75 and 475 years corresponding to 50\% and 10\% probability of exceedance in 50 years, based on major known lines and area source models. According to their study, North Tabriz fault zone and north of Tehran fault zone have the highest acceleration. Maximum mean acceleration in the vicinity of these tectonic elements is predicted to be around 0.45 $g$ and 0.3 $g$ for a return period of 475 and 75 years, respectively. In the smaller scale, using the logic tree approach to compensate for uncertainties in the attenuation relationship, \citet{Ghodrati2003} presented a probabilistic seismic hazard assessment of metropolitan Tehran, the capital of Iran. The results showed that the PGA ranges from 0.27-0.46 $g$ for a return period of 475 years and from 0.33-0.55 $g$ for a return period of 950 years. 
 % In this study we use background seismicity to estimate the seismic hazard in northern Iran. Using background seismicity, \citet{Cao1996} conducted a seismic hazard estimation study in southern California. They concluded that one could obtain similar results implementing background seismicity to those obtained by introducing zones for areas with well-recorded seismicity patterns. \citet{Lapajne1997} used spatially smoothed seismicity modeling to acquire a seismic hazard outlook in Slovenia. They defined 4 different models with different correlation distances, including a model based of the total released seismic energy. They gained an acceptable PGA in comparison with other seismic hazard approaches. \citet{Akinci2004} estimate the seismic hazard in central and northern Italy using smoothed historical seismicity. Their results showed that the smoothed seismicity approach gives reasonable regionalized results without introducing seismogenic zones. This approach has also been used in many regions with different seismicity patterns \citep{Wesson1999, Klein2001, Hamdache2003, Kalkan2009, Moschetti2014, Boyd2008}.
 
-% *********************************************************************************************************************
-% *********************************************************************************************************************
-
 % \subsection{Analysis Method}
 
 % \subsubsection{smoothed seismicity method}
 
-% We use spatially smoothed seismic hazard analysis \citep{Frankel1995} to estimate the seismic hazard. In this model, seismic events are spatially gridded to cells. We are attempting to assess the relative likelihood of moderate earthquakes ($M_w > 4.5$), which cause structural damage. According to \citet{Frankel1995}, moderate earthquakes generally occur in areas that there have been significant numbers of events of magnitude 3 and above. Therefore, these events provide a reasonable guide to where moderate earthquakes will most likely occur. Since the catalog's completeness for $M_w > 3$ and $M_w > 4$ are different, we use two magnitude completeness range for less than $M_w 5$ . Earthquake greater than magnitude 5, most probably will occur near where they have occurred in the past. \\
-% \noindent
-% According to Building and Housing Research Center  \citep{BHRC2014}, $M_w 5$ is considered as a threshold magnitude for onsetting the structural damage. In the smoothed seismicity method, the model uses each event location as a point source, hence $M_w 4.5$ could be damaging earthquake for old masonry buildings or even engineering building if it is very close to it, in this study, in order to consider the probabilistic seismic hazard, we defined two models based on $M_w 5$ and $M_w 4.5$ as a threshold magnitude for seismic hazard calculation. \\
-% \noindent
+% We use spatially smoothed seismic hazard analysis \citep{Frankel1995} to estimate the seismic hazard. 
+% In this model, seismic events are spatially gridded to cells. 
+% We are attempting to assess the relative likelihood of moderate earthquakes ($M_w > 4.5$), which cause structural damage. 
+% % According to \citet{Frankel1995}, moderate earthquakes generally occur in areas that there have been significant numbers of events of magnitude 3 and above. 
+% % Therefore, these events provide a reasonable guide to where moderate earthquakes will most likely occur. 
+% Since the catalog's completeness for $M_w > 3$ and $M_w > 4$ are different, we use two magnitude completeness range for less than $M_w 5$. 
+% Earthquake greater than magnitude 5, most probably will occur near where they have occurred in the past.
+% According to Building and Housing Research Center \citep{BHRC2014}, $M_w 5$ is considered as a threshold magnitude for onsetting the structural damage. 
+% In the smoothed seismicity method, the model uses each event location as a point source, 
+% hence $M_w 4.5$ could be damaging earthquake for old masonry buildings or even engineering building if it is very close to it, 
+% in this study, in order to consider the probabilistic seismic hazard, we defined two models based on $M_w 5$ and $M_w 4.5$ as a threshold magnitude for seismic hazard calculation.
+% In order to calculate the annual rate ($\lambda$) of exceeding ground motion ($u$) at a specific site, according to \citet{Frankel1995}, first we need to divide the region into cells (0.1*0.1) and count all earthquake events which are bigger than $M_{ref}$ in each cell. 
+% We use Herrmann formula \citep{Herrmann1977} to convert the cumulative (i.e. number of events bigger than $M_{ref}$) values to incremental (i.e. number of events from$M_{ref}$ to $M_{ref}+\Delta_m$) values. 
 
-% In order to calculate the annual rate ($\lambda$) of exceeding ground motion ($u$) at a specific site, according to \citet{Frankel1995}, first we need to divide the region into cells (0.1*0.1) and count all earthquake events which are bigger than $M_{ref}$ in each cell. We use Herrmann formula \citep{Herrmann1977} to convert the cumulative (i.e. number of events bigger than $M_{ref}$) values to incremental (i.e. number of events from$M_{ref}$ to $M_{ref}+\Delta_m$) values. Using Gaussian function we smooth the number of events in each cell. The smoothed value $\tilde{n}_i$ is obtained from
+% Using Gaussian function we smooth the number of events in each cell. The smoothed value $\tilde{n}_i$ is obtained from
 
 % \begin{equation}
 % \tilde{n_i}=\frac{\sum_{j} n_{j} e^{\frac{-\Delta_{ij}^{2}}{c^2}}}{\sum_{j} e^{\frac{-\Delta_{ij}^{2}}{c^2}}},
 % \end{equation}
 
 % \noindent
-% where,  $\tilde{n}_i$  is normalized to preserve the total number of events. $\Delta{_i{_j}}$ is the distance between the $i{_t{_h}}$ and $j{_t{_h}}$ cell. The sum is calculated over cells $j$ within a distance of $3c$ of cell $i$.\\
-% \noindent
+% where,  $\tilde{n}_i$  is normalized to preserve the total number of events. $\Delta{_i{_j}}$ is the distance between the $i{_t{_h}}$ and $j{_t{_h}}$ cell. The sum is calculated over cells $j$ within a distance of $3c$ of cell $i$.
+
 % Then we discretized the magnitude and distance in uniform bins and get the total number of Normalized, smoothed events ($N_k$) inside the certain distance increment.
+
 % Having ($N_k$) and $T$ (catalog time duration that we calculated $N_k$ within that duration), we can calculate the annual rate  $\lambda (u> u_0 )$ of exceeding ground motion according to 
 
 % \begin{equation}
@@ -55,14 +108,9 @@ seismic events grouped within spatially gridded cells
 % where $k$ and $l$ are denoted as index of distance and magnitude bin. $P(u>u_0 | D_k,M_l )$ is the probability that for an earthquake at distance $D_k$ with magnitude $M_l$, u at the site will exceed  ground motion $u_0$. This probability depends on the attenuation relation and the standard deviation (aleatory variability) of the ground motion for any specific distance and magnitude \citep{Frankel1995}.
 
 
-
-
-
-
-
-
-% -----------------------------------------------------------------------
-% -----------------------------------------------------------------------
+% *********************************************************************************************************************
+% OLD STUFF
+% *********************************************************************************************************************
 
 %%% My (Naeem) original text
 
