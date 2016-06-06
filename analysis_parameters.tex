@@ -1,17 +1,18 @@
 \section{Analysis Parameters}
-\subsection{Attenuation Relationship}
 
-The choice of the ground motion attenuation relationship, as a highly influential factor, is of a great importance in seismic hazard analysis. \citet{Zafarani2014} used 163 free-field acceleration time histories recorded at epicentral distance of up to 200 km from 32 earthquakes to investigate the predictive capabilities of the local, regional, and next generation attenuation (NGA) ground-motion prediction equations and determined their applicability for northern Iran. After evaluating different Ground Motion Prediction Equations, \citet{Kalkan2004}, \citet{Chiou2008}, and \citet{Boore2008} represented suitable performance for  PGA  with LLH (Log-Likelihood method) score of 1.54, 1.55, and 1.59. Mean of the mentioned attenuation relationships (not shown here), are very close together, especially at higher magnitude. Using \citet{Scherbaum2009} approach and \citet{Zafarani2014} coefficients we calculated the logic tree weights as 0.3376, 0.3354, and 0.3270, respectively. The epistemic uncertainty in attenuation relationship is being considered through using the logic tree approach. Having close mean value and similar logic tree weights, logic tree approach will have a minor effect in considering the epistemic uncertainty. In this study instead of using  different GMPEs we use the best model of attenuation relationship for PGA \citep{Zafarani2014} as well $\pm$ standard deviation. \\
+% \subsection{Attenuation Relationship}
 
-\noindent
-The attenuation relationship is:
+% The choice of the ground motion attenuation relationship, as a highly influential factor, is of a great importance in seismic hazard analysis. \citet{Zafarani2014} used 163 free-field acceleration time histories recorded at epicentral distance of up to 200 km from 32 earthquakes to investigate the predictive capabilities of the local, regional, and next generation attenuation (NGA) ground-motion prediction equations and determined their applicability for northern Iran. After evaluating different Ground Motion Prediction Equations, \citet{Kalkan2004}, \citet{Chiou2008}, and \citet{Boore2008} represented suitable performance for  PGA  with LLH (Log-Likelihood method) score of 1.54, 1.55, and 1.59. Mean of the mentioned attenuation relationships (not shown here), are very close together, especially at higher magnitude. Using \citet{Scherbaum2009} approach and \citet{Zafarani2014} coefficients we calculated the logic tree weights as 0.3376, 0.3354, and 0.3270, respectively. The epistemic uncertainty in attenuation relationship is being considered through using the logic tree approach. Having close mean value and similar logic tree weights, logic tree approach will have a minor effect in considering the epistemic uncertainty. In this study instead of using  different GMPEs we use the best model of attenuation relationship for PGA \citep{Zafarani2014} as well $\pm$ standard deviation. \\
 
-\begin{equation}
-\begin{split}
-ln\ (Y) = b_1 + b_2(M_w-6) + b_3( M_w-6)^{2}+  \\ 
-b_5ln\ r + b_V \ ln(V_S/V_A) \  with \  r= \sqrt{R{r^2_{cl} + h^2}}  
-\end{split}
-\end{equation}
+% \noindent
+% The attenuation relationship is:
+
+% \begin{equation}
+% \begin{split}
+% ln\ (Y) = b_1 + b_2(M_w-6) + b_3( M_w-6)^{2}+  \\ 
+% b_5ln\ r + b_V \ ln(V_S/V_A) \  with \  r= \sqrt{R{r^2_{cl} + h^2}}  
+% \end{split}
+% \end{equation}
 
 \subsection{b-value}
 
@@ -46,6 +47,7 @@ For each of the three seismic regions, Gutenberg-Richter parameters and maximum 
 \end{table*}
 
 \subsection{Catalog Completness}
+
 For the smoothed seismicity method, completeness of each magnitude in the catalog is an important factor.  \citet{Frankel1995} plotted the cumulative number of events against time for different regions. He assumes that from the point that the line become linear, the catalog is complete. This approach is similar to the MAXC method of ZMAP software \citep{Wiemer2001}, where the completeness treshold is the maximum value of the first derivative of the frequency-magnitude curve. Using the cumulative frequency-magnitude distribution of \citet{Gutenberg1944} and also frequency magnitude distribution approach in software ZMAP, \citet{Zare2014} reported the catalog completeness for the study regions. World widely large earthquakes were routinely located after increasing number of seismic stations establishment in the early 1900s \citep{Shearer2009}. Up to 1961 these data formed the early instrumental period. In 1961 the Worldwide Standardized Seismograph Network (WWSSN) was stablished. The record of these seismographs considerably improved the seismic catalogs in different part of the world \citep{Shearer2009}. Fig.~\ref{fig:completness_scatter} shows the magnitude distribution of events with respect to the time of occurrence of the events.
 
 \begin{figure*} [!ht]
