@@ -1,5 +1,54 @@
 
+\begin{table*}[t]
+    \centering
+    \caption{Year thresholds and magnitude completeness for the seismic zones within the region of interest in this study.}
+    \begin{tabular}{lccccrc}
+    	\cline{2-7}                                              \\[-1.6ex]
+                        & 3--4 & 4--5 & 5--6 & 6--7 & 
+                                  \multicolumn{1}{c}{$>7$} &$M_c$\\[0.6ex]
+        \hline                                                   \\[-1.6ex]
+        Azerbaijan      & 1961 & 1961 & 1900 & 1581 & 1042 & 4.5 \\
+        Alborz          & 2005 & 1950 & 1900 & 1664 &--401 & 4.4 \\
+        Kopeh Dagh      & 2005 & 1950 & 1900 & 1673 &    9 & 4.5 \\
+        Zagros          & 2005 & 1961 & 1900 & 1853 & 1439 & 4.4 \\
+        Central-East    & 2005 & 1961 & 1854 & 1837 &  762 & 4.5 \\
+        Uniform Model   & 2005 & 1961 & 1900 & 1778 &--401 & 4.5 \\[0.5ex]
+        \hline 
+    \end{tabular}
+    \label{tab:params} 
+\end{table*}
+
 \subsection{Completeness}
 
-\textcolor{red}{We will bring the completeness section here.}
+An important property of a seismic catalog is its completeness, which is measured both in terms of the magnitude above w....
 
+This parameter defines the minimum magnitude at which the seismic catalog of a region can be considered complete within a certain time period, and is used as input to the seismic analysis. 
+
+...which varies according to magnitude, is used as input during the seismic hazard analysis process. It basically consists in determining the point at which catalog data show a steady occurrence of events. There are multiple approaches to determine the completeness of a catalog. A simple approach used by \citet{Frankel1995} and others is to identify the year at which the rate of events becomes constant. In other words, if looking at a plot of cumulative number of events of a given magnitude range with respect to time, the catalog is assumed to be complete from the year at which moving forward the plot follows a straight line. A similar approach based on the maximum value of the first derivative of the frequency-magnitude curve is implemented in the ZMAP software \citep{Wiemer2001}.
+
+One of the difficulties in determining completeness is the availability of data for a long-enough period of time for all magnitude ranges, especially for large magnitude earthquakes of low recurrence. \citet{Zare} provide the years for catalog completeness in their the original catalog for the different regions in their study on the seismicity of the Middle East. They used the 
+
+
+
+4.5, and 4.4 for 
+Central Iran, and Zagros tectonic seismic regions, respectively. For the uniform model we used 4.5 as a completeness magnitude.
+
+% 		& Azerbaijan  & Alborz & Kopeh Dagh & Central Iran & Zagros & North Iran  \\ \hline
+% 3-4         & 1961  & 2005   & 2005       & 2005         & 2005   & 2005          \\ \hline
+% 4-5         & 1961  & 1961   & 1950       & 1961         & 1961   & 1961          \\ \hline
+% 5-6         & 1900  & 1900   & 1900       & 1854         & 1900   & 1900           \\ \hline
+% 6-7         & 1581  & 1664   & 1673       & 1837         & 1853   & 1778           \\ \hline
+% 7 $< $      & 1042  & -401   & 9          & 762          & 1439   & -401            \\ 
+
+
+% For the smoothed seismicity method, completeness of each magnitude in the catalog is an important factor.  \citet{Frankel1995} plotted the cumulative number of events against time for different regions. He assumes that from the point that the line become linear, the catalog is complete. This approach is similar to the MAXC method of ZMAP software \citep{Wiemer2001}, where the completeness treshold is the maximum value of the first derivative of the frequency-magnitude curve. 
+
+% Using the cumulative frequency-magnitude distribution of \citet{Gutenberg1944} and also frequency magnitude distribution approach in software ZMAP, \citet{Zare2014} reported the catalog completeness for the study regions. 
+
+% World widely large earthquakes were routinely located after increasing number of seismic stations establishment in the early 1900s \citep{Shearer2009}. Up to 1961 these data formed the early instrumental period. In 1961 the Worldwide Standardized Seismograph Network (WWSSN) was stablished. The record of these seismographs considerably improved the seismic catalogs in different part of the world \citep{Shearer2009}. Fig.~\ref{fig:completness_scatter} shows the magnitude distribution of events with respect to the time of occurrence of the events.
+
+According to \citet{Frankel1995}, we made plots of the cumulative number of events against time for different regions' catalog. 
+
+% We pick the Mw 0.5 increments in magnitude to be able to compare the results with \citet{Zare2014}. In order to be able to compare the results with \citet{Zare2014} we merge the data of Azerbaijan and Alborz seismic regions.  Fig.~\ref{fig:completness_compare_zare_2014_Az_Al} shows the completeness of catalog for earthquakes with different magnitude range in Azerbaijan-Alborz region. According to this figure, midrange magnitudes ($ 4 < Mw < 6 $) fairly obey the network developments in 1900 and 1961. The completeness thresholds for each magnitude range which are reported by \citet{Zare2014} are shown by dashed green line. 
+
+% In this study we follow the \citet{Frankel1995} approach to determine the completeness of each region. Even though the approach used by \citet{Frankel1995} will lead to the conservative results, we make sure that we don't use a period of time without knowing the complete number of events. Determining the completeness of the catalog is very sensitive to the data. Converting earthquake magnitudes from different scales to moment magnitude obviously has some error. Having broader range of magnitude will help to minimize these sort of error. In this study we consider the magnitude intervals for completeness study as $Mw = 1$. 
