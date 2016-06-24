@@ -1,3 +1,4 @@
+
 \begin{figure*}[t]
     \centering
     \includegraphics[width=0.8\textwidth]{figures/pdf/figure-05.pdf} 
@@ -7,9 +8,11 @@
 
 \subsection{Completeness}
 
-An important aspect of seismic catalogs is their completeness. This characteristic is measured in terms of the year of completeness and the completeness magnitude, which are used as parameters in the seismic analysis process. In simple terms, the year of completeness is the point in time at which catalog data exhibits a steady rate of event occurrence or record accumulation. This point is typically identified for different magnitude ranges. A simple approach used by \citet{Frankel1995} and others is to select the year at which a plot of the cumulative number of events with respect to time becomes (or starts to resemble) a straight line.
+An important aspect of seismic catalogs is their completeness. This characteristic is measured in terms of the year of completeness and the completeness magnitude, which are used as parameters in the seismic analysis process. In simple terms, the year of completeness is the point in time at which catalog data exhibit a steady rate of event occurrence or record accumulation. This point is typically identified for different magnitude ranges independently. A simple approach used by \citet{Frankel1995} and others is to select the year at which a plot of the cumulative number of events with respect to time becomes (or starts to resemble) a straight line.
 
-On the other hand, the completeness magnitude---denoted as $M_c$---is the minimum magnitude at which the seismic catalog of a region can be considered complete within a certain time period. While the year of completeness can be determined by inspection of the data, the completeness magnitude often requires a numerical analysis of the catalog. A common approach consists on identifying the magnitude associated with the maximum value of the first derivative of the frequency-magnitude curve. This method is known as the maximum curvature (MAXC) technique. It is widely used and has been implemented in the ZMAP software package for seismic hazard analysis developed by \citet{Wiemer2001}. \citet{Zare2014}, for instance, used this software to identify $M_c$ values for the different regions of the Middle East.
+On the other hand, the completeness magnitude ($M_c$) is the minimum magnitude at which the seismic catalog of a region can be considered complete within a certain time period. While the year of completeness can be determined by inspection of the data, the completeness magnitude often requires a numerical analysis of the given catalog. A common approach consists on identifying the magnitude associated with the maximum value of the first derivative of the frequency-magnitude curve. This method is known as the maximum curvature (MAXC) technique. It is widely used and has been implemented in the ZMAP software package for seismic hazard analysis developed by \citet{Wiemer2001}. \citet{Zare2014}, for instance, used this software to identify $M_c$ values for the different regions of the Middle East. 
+
+An alternative approach is the goodness-of-fit test method introduced by \citet{Wiemer2000}.........
 
 One of the difficulties in determining completeness is the availability of data for a period of time long enough for all magnitude ranges, so that selection of completeness parameters is reliable. In this study, we determined the year of completeness for magnitude ranges 3--4, 4--5, 5--6 and 6--7 by inspection, following the approach used by \citet{Frankel1995}. This is illustrated in Fig.~\ref{fig:completeness}, where we show the normalized cumulative number of events with time for each of the seismic zones and magnitude ranges, and indicate our choice of the completeness year thresholds in each case. For events $M_w>7$, in which case there are no sufficient data to determine a proper threshold, we assumed the catalog to be complete from the earliest time at which there is record of large magnitude earthquakes. 
 
@@ -20,20 +23,20 @@ For the case of the completeness magnitude $M_c$, we adopted the values reported
 \begin{table*}%[t]
     \centering
     \caption{Year thresholds and magnitude completeness for the seismic zones within the region of interest in this study. Year of completeness is provided for magnitude ranges between 3 and 7, with $\mathrm{\Delta}M = 1$. The completeness magnitude is provided for the sub-catalogs for three year intervals.}
-    \begin{tabular}{lccccrcccc}
-        \cline{2-10}                                                                                  \\[-1.6ex]
+    \begin{tabular}{lccccrcccccc}
+        \cline{2-12}                                                                                  			\\[-1.6ex]
                         & \multicolumn{5}{c}{Year for $M_w$ ranges} 
-                                                            & & \multicolumn{3}{c}{$M_c$ for sub-catalogs} \\
-        \cline{2-6} \cline{8-10}                                                                      \\[-1.6ex]
+                                                            & & \multicolumn{3}{c}{$M_c$ for sub-catalogs} & &$M_c$\\
+        \cline{2-6} \cline{8-10}                                                                      			\\[-1.6ex]
                         & 3--4 & 4--5 & 5--6 & 6--7 & \multicolumn{1}{c}{$>7$} 
-                                                            & & 1800--1899 & 1900--1999 & 2000--2015  \\[0.6ex]
-        \hline                                                                                        \\[-1.6ex]
-        Azerbaijan      & 1961 & 1961 & 1900 & 1581 & 1042  & &     6.0    &     5.0    &     4.2     \\
-        Alborz          & 2005 & 1961 & 1900 & 1664 &--401  & &     6.2    &     5.0    &     3.5     \\
-        Kopeh Dagh      & 2005 & 1950 & 1924 & 1673 &    9  & &     6.1    &     5.0    &     4.0     \\
-        Zagros          & 2005 & 1961 & 1950 & 1853 & 1439  & &     5.3    &     4.8    &     3.9     \\
-        Central-East    & 2005 & 1961 & 1900 & 1837 &  762  & &     5.5    &     4.8    &     4.0     \\
-        Uniform Model   & 2005 & 1961 & 1900 & 1778 &--401  & &     6.1    &     4.8    &     3.8     \\[0.5ex]
+                                                            & & 1800--1899 & 1900--1999 & 2000--2015  & & Whole	\\[0.6ex]
+        \hline                                                                                        			\\[-1.6ex]
+        Azerbaijan      & 1961 & 1961 & 1900 & 1581 & 1042  & &     6.0    &     5.0    &     4.2     & &  4.2 	\\
+        Alborz          & 2005 & 1961 & 1900 & 1664 &--401  & &     6.2    &     5.0    &     3.5     & &  4.3 	\\
+        Kopeh Dagh      & 2005 & 1950 & 1924 & 1673 &    9  & &     6.1    &     5.0    &     4.0     & &  4.9 	\\
+        Zagros          & 2005 & 1961 & 1950 & 1853 & 1439  & &     5.3    &     4.8    &     3.9     & &  4.8 	\\
+        Central-East    & 2005 & 1961 & 1900 & 1837 &  762  & &     5.5    &     4.8    &     4.0     & &  4.8 	\\
+        Uniform Model   & 2005 & 1961 & 1900 & 1778 &--401  & &     6.1    &     4.8    &     3.8     & &  4.8 	\\[0.5ex]
         \hline 
     \end{tabular}
     \label{tab:completeness} 
