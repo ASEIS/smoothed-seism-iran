@@ -22,7 +22,7 @@ gmt makecpt -CcbcYlOrRd -Do -T0/1.0/0.05 > ${CPTFILE}
 gmt surface ${FILENAME}.txt -R43.5/61.5/34/40 -I0.01 -T0.3 -G${GRDFILE}
 
 gmt grdimage ${GRDFILE} -R -JM5i -C${CPTFILE} -K -P -V > ${OUTFILE}
-gmt grdcontour ${GRDFILE} -J -R -C0.1 -A0.1+f6p -W0.5p -O -K -V >> ${OUTFILE}
+gmt grdcontour ${GRDFILE} -J -R -C0.2 -A0.2+f6p -W0.5p -O -K -V >> ${OUTFILE}
 gmt psscale -C${CPTFILE} -D5.3i/1i/1.8i/0.15i -E -B0.1 -O -V >>${OUTFILE}
 
 gmt ps2raster ${OUTFILE} -F${FILENAME}.pdf -Tf -Au0.5c 
