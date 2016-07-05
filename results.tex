@@ -15,15 +15,22 @@
 \begin{figure*}[t]
     \centering
     \includegraphics[width=\textwidth]{figures/pdf/figure-10.pdf} 
-    \caption{plus minus std for M6.5.}
+    \caption{Expected PGA values throughout the region of interest for 2 and 10 percent probability of exceeding an earthquake magnitude $M_w$ 6.5 using the hazard calculations from the five-region R model and the attenuation relationship plus and minus one standard deviation.}
     \label{fig:pgastd}
+\end{figure*}
+
+\begin{figure*}[th!]
+    \centering
+    \includegraphics[width=\textwidth]{figures/pdf/figure-11.pdf} 
+    \caption{Expected PGA values for different combination models. (a) Combination of R models for magnitudes $M_w$ 5.5 and 6.5. (b) Combination of U models for magnitudes $M_w$ 5.5 and 6.5. (c) Combination of R and U models for separate magnitudes $M_w$ 5.5 and 6.5. (d) Combination of R and U models, and magnitudes $M_w$ 5.5 and 6.5.}
+    \label{fig:pgaavgs}
 \end{figure*}
 
 \section{Results and Analysis}
 
 Using the data, parameters, and procedures described above, we considered different hazard models based on whether we use the five distinct seismic hazard regions or the whole area of interest as a uniform seismic hazard region. We call these the R and U models, respectively. We also considered two threshold levels of ground motion for events exceeding magnitudes $M_w$ 5.5 and 6.5. We refer to these models with the suffixes 5.5 and 6.5, respectively. Each of these are considered under two probabilities of exceedance, at 2 and 10 percent in 50 years, for which we use the prefixes 2 and 10, respectively. These probabilities correspond to return periods of 475 and 2475 years. As an example of the chosen nomenclature, we refer to the results for 2 percent probability of exceeding an event magnitude $M_w$ 5.5 in 50 years under the five seismic regions model as the 2R5.5 model results.
 
-In the distinct regions R models, we computed the probability of exceedance of the ground motion separately for each region and then add them together in order to have the contribution of all regions for any given grid point within the region of interest. The results are obtained in the form of annual rate of exceedance. Expected PGA values are therefore a slice of the actual hazard curves cut across all grid points for a chosen magnitude.
+In the distinct regions R models, we computed the probability of exceedance of the ground motion separately for each region and then add them together in order to have the contribution of all regions for any given grid point within the region of interest. The results are obtained in the form of annual rate of exceedance. Expected PGA values are therefore a ``slice'' of the actual hazard curves cut across all grid points for a chosen magnitude.
 
 We extract expected levels of ground motion for magnitudes 5.5 and 6.5, based on the assumption that buildings of different construction systems may be vulnerable to different magnitude earthquakes. It is natural to anticipate that modern constructions in urban areas in Iran follow current building regulations and are thus well-designed to withstand moderate magnitude earthquakes $M_w$ 4.5--6.5, and to undergo moderate non-life threatening damage during $M_w > 6.5$ events. Unconventional constructions in poor city outskirts, rural housing and historical buildings may, however, be vulnerable to $M_w \leq 5.5$, and thus becomes relevant to entertain lower magnitude exceedance levels. In turn, the 2 and 10 percent probability of exceedance in a 50-years span are considered a standard practice in seismic design \citep[e.g.,][]{BHRC2014}.
 
@@ -37,19 +44,16 @@ These, of course, are only mean expected levels of ground motion. A more complet
 
 The highest expected PGA values are observed in the 2R6.5+STD model with accelerations of higher than 1 g in the Kopeh Dagh region and west of Tehran, and 0.8 g south of the North Tabriz Fault system and in the Zagros region along. These maximum values should, nonetheless, be interpreted with caution given the fact that predictions are based on rock-site assumptions and do not include any kind of site effects, such as inelastic deformation of near-surface geotechnical layers which may often contribute to mitigate peak accelerations.
 
-An additional consideration to make here is the fact that one cannot claim any of the models to be uniquely correct. They all carry a certain level of epistemic uncertainty which make them equally accurate and inaccurate at the same time. An means to reduce the overall uncertainty intrinsically associated with each model is to use combinations of different models. We consider two types of combinations here to aid our analysis. First, we combine results at both magnitude thresholds following the hypothesis that in areas were mixed reinforced and unreinforced buildings are present, the hazard and associated expected ground motions will be an average of both models, i.e. $frac{1}{2}(5.5+6.5)$. Second, we consider a combination of the five-regions model and the uniform model, i.e. $frac{1}{2}(\mathrm{U}+\mathrm{R})$, based on the hypothesis that both models carry forward valid information about the local and regional seismicity.
+An additional consideration to make here is the fact that any one model cannot be uniquely correct. They all carry a certain level of epistemic uncertainty which makes them equally accurate and inaccurate at the same time. A means to address the uncertainty intrinsic to each model is to use combinations of different models. We consider different types of combinations to aid our analysis. First, we combine results at in the R and U models independently by averaging the two magnitude results. These combinations follow the hypothesis that in areas where mixed reinforced and unreinforced buildings are present, the hazard and associated expected ground motions will be an average of both magnitude thresholds. Fig.~\ref{fig:pgaavgs}a shows the result of this combination for the R models and Fig.~\ref{fig:pgaavgs}b shows the result for the combined U models. Second, we consider the combination of the two underlying hazard models R and U for the separate magnitude levels. These results are shown in Fig.~\ref{fig:pgaavgs}c. Last, we consider an overall combination of both hazard models and magnitude thresholds, as shown in Fig.~\ref{fig:pgaavgs}d. At all times we keep separate the probabilities of exceedance.
 
-Fig.~\ref{fig:}a shows 
+These figures show interest results. Combining the two magnitude levels in either the R or U models (Figs.~\ref{fig:pgaavgs}a and \ref{fig:pgaavgs}b) does not have a significant impact other than finding a middle point in between the two ``slices'' taken at the corresponding hazard curves of all the individual grid points. For that matter, defining a threshold at $M_w$ 6.0 is almost equivalent and becomes only a matter of choice. Combining both R and U models, and the two magnitude results (Fig.~\ref{fig:pgaavgs}d), on the other hand, oversmooths the results and eliminates some of the detail desirable in this kind of analysis. It is therefore the combination of the R and U models, but at the separate magnitude thresholds (Fig.~\ref{fig:pgaavgs}c) the one that offers the most plausible scenario. These combinations are the ones that best match the visual inspection of the seismicity of the region (shown in Fig.~\ref{fig:catalog}) and follow the major faults (shown in Fig.~\ref{fig:selected}a), while also bringing into the picture the regional background seismicity of moderate magnitude earthquakes. That is, in the combinations shown in Fig.~\ref{fig:pgaavgs}c one can clearly observe the contribution of the North Tabriz Fault system in the Azerbaijan region, the contribution of the Piranshahr and Morvarid faults in the Zagros region, and that of the different faults in the Alborz and Kopeh Dagh regions. 
+
+We also note that the overall distribution of PGA values shown in Fig.~\ref{fig:pgaavgs}c are the ones that best agree with the recent study by \citet{Khodaverdian_2016_BSSA}. These estimates also agree, on average, with other previous studies. For the north-west seismic regions of Azerbaijan and Zagros, for instance, \citet{Tavakoli1999} predicts maximum mean PGA values of 0.45 g near the North Tabriz Fault and the North Tehran Fault zones, and 0.4 g around the city of Urmia, where we find equivalent values to be between 0.4 and 0.6 g, and about 0.35 g, respectively. The results from \citet{Vafaie2011} for the city of Tabriz, on the other hand, are slightly higher than the averages shown in Fig.~\ref{fig:pgaavgs}c and are closer to those we present in Fig.~\ref{fig:pga}b, which are in the order of 0.8 g and 0.6 for the models 2U5.5 and 10U5.5. In the north-central region of Alborz, \citet{Ghodrati2003} and \citet{Boostan2015} predict PGA values of the order 0.27--0.46 g and 0.42--0.48 for Tehran, where we found equivalent results to be between 0.3 and 0.45 g. Similarly, \citet{Abdi2013} reports expected PGA values in the vicinity of Karaj and Tehran to be on the order of 0.3 g. Results from \citet{Ghodrati2008} for the Gilan province around the city of Rasht are also of the same order of those we show in Figs.~\ref{fig:pga} and \ref{fig:pgaavgs}c. Finally, in for the Kopeh Dagh region, and in particular, for the city of Bojnurd in the nort-east province of Khorasan, \citet{Rahgozar2012} reports expected PGA values for return periods of 475 and 2475 years in range of 0.15--0.22 g and 0.28--0.49 g, respectively, where for magnitudes exceeding $M_w$ 6.5 we found equivalent values to be in the order of 0.2--0.4 and 0.4--0.6 g. 
 
 ~\\
 * * *
 \\
 
-% \subsection{Hazard Curve}
-
-% We calculated the probability of exceedance of the ground motion from different ground motion levels, separately for each of 5 regions. 
-% We add the probability of all regions in order to have the effect of seismicity from all tectonic seismic regions. 
-% The results are presented as annual rate of exceedance. 
 
 Fig.~\ref{fig:hazardcurve} represents the hazard curve of different model for some of important northern cities in Iran. 
 
@@ -60,35 +64,21 @@ Fig.~\ref{fig:hazardcurve} represents the hazard curve of different model for so
 \label{fig:hazardcurve}
 \end{figure*}
 
-% \subsection{Peak Ground Acceleration}
-
-We pick the peak ground acceleration for 10\% and 2\% probability of exceedance in 50 years which correspond with 0.002 and 0.0004 annual rate of exceedance. 
-
-% Fig.~\ref{fig:pga_10_mean} and Fig.~\ref{fig:pga_2_mean} show the results for 10\% and 2\% probability of exceedance in 50 years, respectively.
-% These results are according to the mean value of the attenuation relationship.
-% Fig.~\ref{fig:pga_10_mean_uniform} and Fig.~\ref{fig:pga_2_mean_uniform} show the results for 10\% and 2\% probability of exceedance in 50 years for the uniform model, respectively.
-
-% -------
-
-% Even though in this study we are interested in investigating seismic hazard study in the northern Iran, in the smoothed seismicity method we defined the border of the study region broadly enough to ensure that the seismicity outside of the border doesn't affect the study area.  
-% In addition, the border of the influenced area should surround the area of interest as uniformly as possible \citep{Lapajne1997}. 
-% Therefore, our study region includes parts of central and eastern Iran and the Zagros tectonic seismic regions.
-
-% We calculated the $a-values$ for each cell and spatially smoothed over a grid of $0.1 \times 0.1$ in latitude and longitude. 
-% We assume magnitude increment as $\Delta_M = 0.1$. 
-
-% In this model, events are not assigned to specific faults and are assumed to be potential seismogenic sources, and are spatially gridded to cells.
-
-% Different correlation distances have been used in different studies, which are generally dependent on the accuracy of the location of the recorded earthquakes. \citet{Frankel1995} and \citet{Boyd2008} assumed the correlation distance to be 50 $km$. \citet{Barani2007} used distance of 25 $km$ based on previous studies that suggested the correlation function of the Alps and Apennines in Italy. \citet{Foteva2006} used 10 and 15 km in a different model. Correlation distance is a very sensitive parameter in smoothed seismic hazard maps, and it is a factor of uncertainty in earthquake location. In the Iranian earthquake catalog, the magnitude uncertainties were assumed to be in the interval of $\pm$ 0.25 magnitude units and epicentral errors of $\pm$ 30 km \citep{Zare2012}. Even though these error margins are different for different events in terms of instrumental or historical events, in this study we assumed the correlation distance as 30 km because of the lack of knowledge about other historical events. 
-
-% Regarding the study domain and the 0.1 grid size, the total number of source is grid sites is 11651. Even though \citet{Kalkan2004} derived the attenuation relationship up to 250 km, since \citet{Zafarani2014} used data up to 200 km to evaluate the GMPEs, we set the model to compute the ground motions at distances of less than 200 km.
-
-% Fig.~\ref{fig:10percent} and Fig.~\ref{fig:2percent} show the seismic hazard map based on background seismicity for 10\% and 2\% probability of exceedance in 50 years, respectively. The areas of large probabilistic ground motions clearly coincide with zones with a large number of events with magnitude 3 and larger.
 
 % ==================
 % OLD STUFF NOT USED
 % ==================
 
+% The results are presented as annual rate of exceedance. 
+
 % Regarding the study domain and the 0.1 grid size, the total number of source as grid points is 13561. 
 
-% corresponding to return periods of 475 and 2475 years.
+% Regarding the study domain and the 0.1 grid size, the total number of source is grid sites is 11651. 
+
+% Even though \citet{Kalkan2004} derived the attenuation relationship up to 250 km, since \citet{Zafarani2014} used data up to 200 km to evaluate the GMPEs, we set the model to compute the ground motions at distances of less than 200 km.
+
+% We pick the peak ground acceleration for 10\% and 2\% probability of exceedance in 50 years which correspond with 0.002 and 0.0004 annual rate of exceedance. 
+
+% \citet{Abdollahzadeh2014a} carried out a probabilistic seismic hazard assessment for part of Northern Iran. They used the logic tree approach to capture the epistemic uncertainty of seismic hazard assessment in delineation of seismic sources and selection of attenuation relationship. They used three attenuation relationships and 2 seismic source models. They collected the earthquake catalog from various references and reported the pga for 475 and 2475 years of return period for northern cities.   
+
+% \citet{Golara2014} conducted a probabilistic seismic hazard analysis of interconnected infrastructure of Iranian high pressure gas supply system. He used line and area source model in order to estimate the Iranian  high-pressure gas supply system's ability to withstand a sudden large ground movements caused by potential earthquakes and related phenomenon that might be expected. he used simplified tectonic map after \citet{Alavi1991}. He used four attenuation relationships and presented the results for 2475 years of return period. 
