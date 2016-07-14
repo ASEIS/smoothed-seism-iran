@@ -1,6 +1,6 @@
 *~*
 *.bak
-.DS_Store
+*.DS_Store
 latex-springer
 main.pdf
 
