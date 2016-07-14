@@ -17,7 +17,7 @@ gmt gmtset MAP_TICK_LENGTH_PRIMARY  6p/3p
 gmt gmtset MAP_LABEL_OFFSET         8p
 gmt gmtset MAP_ANNOT_OFFSET_PRIMARY 5p
 
-gmt makecpt -CcbcYlOrRd -Do -T0/1.0/0.05 > ${CPTFILE}
+gmt makecpt -CcbcYlOrRd -Do -T0/1/0.05 > ${CPTFILE}
 
 gmt surface ${FILENAME}.txt -R43.5/61.5/34/40 -I0.01 -T0.3 -G${GRDFILE}
 
