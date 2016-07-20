@@ -1,0 +1,83 @@
+
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{setspace}
+\usepackage{simplemargins}
+\usepackage{caption}
+\usepackage{tocloft}
+\usepackage{abstract}
+\usepackage{authblk}
+\usepackage[round,authoryear,semicolon]{natbib}
+\usepackage[left,displaymath,running]{lineno}
+\usepackage[tablesfirst,notablist]{endfloat}
+
+\setallmargins{1in}
+
+\renewcommand{\abstractnamefont}{\normalfont\Large\bfseries\raggedright}
+\renewcommand{\abstracttextfont}{\normalfont\normalsize\noindent}
+\setlength{\absleftindent}{0pt}
+\setlength{\absrightindent}{0pt}
+
+\setlength\linenumbersep{20pt}
+\doublespacing
+\captionsetup{font=doublespacing}
+\captionsetup{labelfont=bf}
+\cftpagenumbersoff{figure}
+
+\AtBeginDelayedFloats{\renewcommand\baselinestretch{1.4}}
+\renewcommand\cftloftitlefont{\large}
+\renewcommand\listfigurename{
+	\begin{center}\bf
+	Figure Captions
+	\end{center}
+}
+\setlength{\cftparskip}{2ex}
+\renewcommand\cftfigpresnum{\bf Figure~}
+\renewcommand\cftfigaftersnum{.}
+\renewcommand\cftfignumwidth{5.5em}	
+
+\clubpenalty=10000  % Orphan - First of paragraph left behind
+\widowpenalty=10000 % Widow  - Last of paragraph sent ahead
+
+\begin{document}
+
+\linenumbers
+
+% Long Title
+\title{\bf%
+Seismic Hazard Estimation of Northern Iran Using Smoothed Seismicity
+}
+
+\author[1]{Naeem Khoshnevis}
+\author[1,2]{Ricardo Taborda\thanks{Corresponding author, ricardo.taborda@memphis.edu}}
+\author[1,2]{Shima Azizzadeh-Roodpish}
+\author[1]{Chris H.~Cramer}
+\affil[1]{Center for Earthquake Research and Information, University of Memphis, 3890 Central Ave., Memphis TN 38152, USA}
+\affil[2]{Department of Civil Engineering, University of Memphis, 3890 Central Ave., Memphis TN 38152, USA}
+
+\date{}
+% Authors
+% \author{%
+% 	N.~Khoshnevis \and
+% 	R.~Taborda\thanks{Corresponding author} \and
+% 	S.~Azizzadeh-Roodpish \and
+% 	C.~H.~Cramer
+% }
+
+% Title Production
+\maketitle
+
+% Abstract
+\begin{abstract}%
+\input{abstract}
+\end{abstract}
+
+\input{content}
+
+\bibliographystyle{spbasic}
+\bibliography{references}
+
+\end{document}

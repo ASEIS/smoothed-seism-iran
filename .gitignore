@@ -3,6 +3,7 @@
 *.DS_Store
 latex-springer
 main.pdf
+submission.pdf
 
 figures/gmt/*.eps
 figures/gmt/*.pdf
