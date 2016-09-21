@@ -17,7 +17,7 @@
 \begin{center}
 	\bf
 	\large
-	Authors' Response to Reviewer 1 (Anonymous)
+	Authors' Response to Reviewer 1 
 \end{center}
 
 \noindent
@@ -26,23 +26,123 @@ We thank the reviewer for his/her comments and suggestions, which helped us impr
 \newline 
 
 \introcomment{~}{%
-Objective of this paper is quantitative evaluation of the validity of the four different 3D velocity structure model in southern California by means of numerical simulation of ground motions from observed earthquakes. They tested 30 moderate sized earthquakes, and showed the GOF in the various presentations including event average and station average. Finally, they concluded that CVMS4.26 yielded the better results among four tested models. Overall, this paper is quite well written, and materials presented in this paper is informative. The results of this paper will benefit to the community. I have some comments to further improve the significance of their study.
+The authors perform a seismic hazard analysis for northern Iran using a newly developed source model from smoothed seismicity. The work is an important contribution to seismic hazard analyses in Iran. Development of the seismic source model follows a careful analysis of the earthquake catalogs for information about spatially varying earthquake rates, maximum magnitudes and b-values. The authors are careful to acknowledge that alternative means for estimating earthquake recurrence - and for other components of the source and ground motion characterization - also exist, and that this work is only one approach for characterizing hazard in the region.
 }
 
 \comment{1}{%
-The authors showed the spatial distribution of GOF on tha mep in Figures 9, 10, 11, and 15. Actual GOF values were obtained only at stations where observed records were available. The authors spatially interpolated GOF values to draw the map. However, I think it is not a good representation of the results. Because the stations were not uniformly distributed, some isolated stations had stronger impact on these maps. It controls the impression of these figures. I think that color representing GOF should be given only inside the symbol (i.e. circle) representing individual stations, and the area without station should not be colored.
+Pp3, Line 71: A short, summary description of previous source models would highlight the contribution of this work. In particular, summary details of the work by Khodaverdian et al should be included to indicate how the approach of the authors differs from previous work. 
 }
 
 \response{%
-The reviewer brings an important point to the table. We did consider this option in the past---in two previous publications by the leading author---and rejected it. The major issue with the suggested format is that the symbols (e.g., circles) would have to be large enough in order for the colors to be noticeable. This is fine if the stations are sufficiently scattered throughout the domain at somewhat even distances from each other. Unfortunately, that is not the case. A good number of stations are in (very) close proximity to each other---specially in the basin area---and then the size of the symbols becomes an issue. One is then left with no good option. If the symbols are made small enough to avoid overlapping, the color is not visible; and if they are large enough for the color to be noticeable, then they will often overlap. Both options lead to a more difficult interpretation of the results than the imperfect option of the surface interpolation. In addition, as mentioned in the manuscript, the format chosen to present the results in these figures has already been used in two previous publications (Taborda and Bielak, 2013, 2014). This is an advantage because consistency allows one to look back at previous results and appreciate the differences and improvements achieved over the years. Furthermore, this or other similar formats have been used or adopted by other authors (e.g., Olsen and Mayhew, 2010; Lee et al.~2015). All things considered, we have added a comment when presenting the results of the first figure to make explicit the fact that the interpolation is artificial. Please see page 25.
+Response will be here.
 }
 
 \comment{2}{%
-As shown in Figures 8 and 9, GOF values for the same station have large deviation. Thus, the information on the standard deviation among events can be added to Figure 15. I think this point is very important in this kind of study, and possible reasons for obtaining large GOF deviation for the same station using the same 3D velocity model needs to be addressed in deep by the authors. Since, the same 3D velocity model are used in the numerical simulation, the validity of source model might affect this comparison. The calibration and validation of the source models should be adequately given in this paper.
+Pp 3, line 77: Fault-based/geologic-based earthquake recurrence estimates 
 }
 
 \response{%
-We thank the reviewer for pointing this out. Indeed, the standard deviation at the individual stations is a matter of importance. We had this information at our disposal but did not realize it was worth including it in the manuscript in the form of a figure. We now present this information in the new Figure 16, which illustrates the variance in the average scores obtained for each station in the form of the unbiased sample standard deviation. A comment on the results presented in this new figure is now included in pages 33 and 34.
+Response will be here.
+}
+
+\comment{3}{%
+Pp 4, line 106: Should this be northwest?
+}
+
+\response{%
+Response will be here.
+}
+
+\comment{4}{%
+Pp 6, line 168: It would be good to add a reference for the GEM effort.
+}
+
+\response{%
+Response will be here.
+}
+
+\comment{5}{%
+Pp7-8: Discussion about identifying the completeness level of the earthquake catalogs is a bit confusing. Typically, one either specifies a minimum magnitude of completeness (Mc) and then tries to identify the earliest time for which events or complete; or, one specifies a year and computes the corresponding Mc. In reading the text, it appears that both methods were used. Please clarify.
+}
+
+\response{%
+Response will be here.
+}
+
+\comment{6}{%
+Pp7-8: The authors should note that some authors use an alternative smoothing kernel $(~exp(-(D/2*sigma)^2)$. Comparison of the smoothing length between different studies may require consideration of a $sqrt(2)$ factor.
+}
+
+\response{%
+Response will be here.
+}
+
+
+\comment{7}{%
+Pp7-8: In addition to the Mirzaei et al. (1997) reference, some authors employ likelihood testing of smoothed seismicity rate models to identify optimal smoothing lengths for adaptive and fixed smoothed seismicity methods (e.g., Werner et al., 2011; Moschetti, 2015). 
+}
+
+\response{%
+Response will be here.
+}
+
+\comment{7}{%
+Pp 9: Kagan and Jackson, 1994 should also be included in the reference list.
+}
+
+\response{%
+Response will be here.
+}
+
+\comment{8}{%
+Pp 10, line 302: " ... subjective decisions and any reasonable choice ...  " I would disagree that these are subjective decisions. My opinion is that you have applied scientific judgment. You clearly need to communicate where judgment is applied; however, \\
+- Details about the implementation of the two seismicity rate models (U, R) should be expanded. Are sub-catalogs developed for the five separate regions and then used to develop separate a-grids? Presumably, the separate rate files are then used to compute hazard curves and are summed at each location. \\
+-A logic tree would be of great benefit in clarifying how the source models are combined. In particular, it would clarify the weighting from different completeness levels.\\
+-Plots of seismicity rates from the R and U models would be of interest and particularly relevant given that the smoothed seismicity model is the main contribution of this work to hazard analyses for Iran.
+}
+
+\response{%
+Response will be here.
+}
+
+\comment{9}{%
+Pp 14, line 391 The incorporation of smaller earthquakes $(M<5)$ will have a significant influence on the hazard associated with PGA. Recent papers by Atkinson and others have demonstrated this effect. You may wish to argue that Mmin was chosen based on the expected smallest magnitude capable of causing damage.
+}
+
+\response{%
+Response will be here.
+}
+
+\comment{10}{%
+Figure 7: Is the magnitude-frequency distribution just a truncated (Mmin, Mmax) GR model? Figure 7 suggests that the MFD may be tapered?
+}
+
+\response{%
+Response will be here.
+}
+
+\comment{11}{%
+Pp 12, line 345: "... controls the spatial extent to which the local occurrence of earthquakes ..." I would argue that the smoothed seismicity controls the local occurrence and spatial distribution of earthquakes and that the GMPEs control the intensity level at a particular site given earthquake locations and magnitudes from your source model.
+}
+
+\response{%
+Response will be here.
+}
+
+\comment{12}{%
+Pp 13, line 361: Change "approached" to "approach" and "lead" to "led."
+}
+
+\response{%
+Response will be here.
+}
+
+\comment{13}{%
+The approach to generating Figure 10 should be clarified. It appears that the probabilistic ground motions from the R and U model are averaged and used to compute a standard deviation. The formal method for combining alternative models in PSHA is through the logic tree; this is equivalent to weighting the models in hazard (rate) space, rather than in ground motion (intensity, PGA) space. It appears that the authors have done the latter, though I may be incorrect. If this is the case, please correct. It is very reasonable to combine the R and U models to produce another alternative model. This work is not a comprehensive seismic hazard analysis, and presentation of probabilistic ground motions from the R, U and a weighted model would be reasonable goal. However, I would caution against comparing probabilistic ground motion maps with maps of seismicity because the varying b- and Mmax-values for the R model greatly complicate the comparison. As mentioned earlier, formal testing methods exist for ensuring consistency of observed earthquake locations with the smoothed seismicity models (see CSEP references?Zechar, Schorlemmer, Werner, Helmstetter, Jackson; Moschetti, 2015). Applying these methods is beyond the scope of this work, but might be recognized as a future direction.
+}
+
+\response{%
+Response will be here.
 }
 
 \newpage
@@ -50,8 +150,8 @@ We thank the reviewer for pointing this out. Indeed, the standard deviation at t
 \begin{center}
 	\bf
 	\large
-	Authors' Response to Reviewer 2 (Robert Graves)
-\end{center}
+	Authors' Response to Reviewer 2 
+	\end{center}
 
 \noindent
 We thank the reviewer for his comments and suggestions, which helped us improve the manuscript. To help the review process, in the annotated manuscript version of the paper, we have highlighted the changes that resulted from these comments in green colored font when appropriate. In the following, we provide a response to each comment. The original comments are in italic black font, followed by our responses in regular blue font.
@@ -59,306 +159,302 @@ We thank the reviewer for his comments and suggestions, which helped us improve 
 \newline 
 
 \introcomment{~}{%
-This paper presents an analysis of 3D ground motion simulations for 30 earthquakes in the Los Angeles basin region that were computed using four different 3D seismic velocity models. The goal of the analysis is to compare the results obtained with the different models to see which models, or parts thereof, perform better, and to provide a baseline for comparison of future model iterations.
+Review of Seismic Hazard Estimation of Northern Iran Using Smoothed Seismicity by Naeem Khoshnevis, Ricardo Taborda, Shima Azizzadeh-Roodpish, and Chris H. Cramer
 }
 
 \introcomment{~}{%
-This paper is very well written, interesting and informative and my view of this work is quite favorable. I think the paper is worthy of publication after some minor revision.
-}
-
-\introcomment{~}{%
-My main general comment has to do with the use of the word ``validation'' that appears throughout the manuscript. In a number of these instances, I feel it would be more appropriate if the term ``validation'' were replaced with the term ``assessment'' (or something similar, like ``evaluation''). To me, the ``validation'' of something implies it to be true (e.g., I validated your parking permit), whereas the assessment of something simply means it is being analyzed and its performance possibly ranked with respect to something else. Most of what is done in this paper is an assessment of the simulation results, since in the end, none of the velocities models is truly “validated”. This assessment process is nonetheless very important in that it provides a relative measure of the performance of each of the velocity models. I would suggest the authors consider using a different term as they go through the revision of the paper.
-}
-
-\response{
-We understand and agree, to some extent, with the points raised here by the reviewer. Our intention was to evaluate the models, or assess the model, through a validation of the simulations. We believe the word validation is well used here when referring to the comparisons of the synthetics with data in the same sense in which the terms ``validation'' and ``verification'' has been defined in other publications such as Bielak et al.~(2010) or Taborda and Bielak (2013). That said, the author stands correct in that we may have been abused the use of the word in several instances when we were not being specific about the validation of the individual simulations themselves, but through them, we were actually evaluating the models. In this spirit we have welcomed and adopted most if not all the suggestions by the reviewer in this regard, including the change in the title, which makes it simpler and more to the point. These changes are documented in the answers to the individual comments below.
-}
-
-\introcomment{~}{%
-A detailed listing of all my specific comments is included in the accompanying marked-up copy of the manuscript.
+In this paper, the researchers present a new seismic hazard analysis of northern Iran. The paper makes use of the latest available data and methods, is thorough in its review of previous work, and is very well presented and written. I have a few suggestions that I think would improve the impact of their results. The annotated version of the manuscript contains additional and more specific suggestions.
 }
 
 \comment{1}{%
-Page 1, title. The phrasing ``validation of recorded events'' does not sound correct. The events are real and the records are true data, therefore they are not being validated (we assume them to be valid). I think the title would be more appropriate if the words ``and Validation'' were removed.
+The authors present uncertainty in their hazard estimate but do not include a more exhaustive logic tree analysis. Effectively, they have two branches: a regional model and uniform model. It appears that they apply the aleatory uncertainty in the ground motion prediction relation to a form of epistemic uncertainty, effectively double counting this uncertainty in the hazard analysis. I would prefer to see a more standard logic tree analysis where multiple GMPEs (or a backbone plus and minus one standard deviation) and uncertainty in a-value, b-value, and Mmax, for example, are considered. Barring this analysis, I would remove figure 10 and references to hazard uncertainty.
 }
 
-\response{The suggested change to the title was adopted.}
+\response{Response will be here.}
 
 \comment{2}{%
-Page 2. General comment on the use of the term ``validation''. In a number of places in this paper, I feel it would be more appropriate if the term ``validation'' were replaced with the term ``assessment'' (or something similar, like ``evaluation''). To me, the ``validation'' of something implies it to be true (e.g., I validated your parking permit), whereas the assessment of something simple means it is being analyzed. Most of what is done in this paper is an assessment of the simulation results, which is nonetheless very important in that it provides a relative measure of the performance of each of the velocity models.
+While I think that the regional and uniform models are generally correct within 1.5 degrees of the border, I think that outside of this region, they may be moderately underestimating hazard by not considering sources with 200 km of their region of interest. Their buffer zone for sources is presently 50 km.
 }
 
-\response{We introduced a small change in the abstract and other similar changes in several other places throughout the manuscript to better express the essence of the comparisons done in light of the point raised by the reviewer. Also see our response to other comments below.}
+\response{Response will be here.}
 
 \comment{3}{%
-Page 4, line 17. Replace with ``collection of recorded''
+It would be good if the abstract is more specific about the results. Where is the hazard greatest? What sources contribute to regions of higher hazard?
 }
-
-\response{Fixed.}
+\response{Response will be here.}
 
 \comment{4}{%
-Page 5, figure 1. Difficult to see the labels ``A'', ``B'' and ``C'' in Figure 1c.
+In the second paragraph of the introduction, I would include a reference to a figure of the region to help readers less familiar with the area. This figure should also be referred to in subsequent paragraphs. It is probably sufficient to move reference to figure 1 here.
 }
-
-\response{The labels are now framed in a circle with white background. This should make them more visible.}
+\response{Response will be here.}
 
 \comment{5}{%
-Page 6, line 20--24. I'm not sure what this means. Can you explain further?
+line 39:   eighth        -> eight
 }
-
-\response{We eliminated this sentence. A better explanation is out of the scope of the paper and is not of major relevance. We took this opportunity, instead, to make clarity about the fact that the model CVM-S4.26 as used here is in fact a modification of the raw model that resulted from the inversion done on top of CVM-S4. We did this in consultation with colleagues from SCEC to satisfy recent changes in the nomenclature of the models.}
+\response{Response will be here.}
 
 \comment{6}{%
-Page 6, line 41. Delete ``In turn''.
+line 55   focuses in -> focuses on
 }
-
-\response{Done.}
+\response{Response will be here.}
 
 \comment{7}{%
-Page 10, line 12. Should be ``BC''.
+line 56 -> Please be more specific about how your analysis differs from previous analyses.
 }
-
-\response{Fixed.}
+\response{Response will be here.}
 
 \comment{8}{%
-Page 10, line 38. The event IDs are a unique and vitally important component of the data archival system used by the Southern California Seismic Network. Please add a citation to the Southern California Earthquake Data Center, i.e., SCEDC (2013): SCEDC (2013). Southern California Earthquake Center, Caltech, Dataset, doi:10.7909/C3WD3xH1
+line 60 -> Can you be more specific? What are the other indicators?
 }
-
-\response{Citation to SCEDC is now included.}
+\response{Response will be here.}
 
 \comment{9}{%
-Page 10, lines 41--43. Is Lee et al. (2011) the correct reference as several of the events occurred after the publication date of this paper? Also, does this mean that all of the events considered in the current analysis were also used in the 3D tomographic inversion to develop CVM-S4.26? And, how many of these events were also used in the 3D tomographic updates to CVM-H?
+line 71 -> Include reference? Include reference.
 }
-
-\response{We modified the text to provide a better explanation. Yes, all the events considered here were used in the inversions that led to CVM-S4.26. In total, 17 of the 30 events were also used in the 3D tomographic updates to CVM-H. In addition to the text, we also modified the table to provide information about which of these events were used in CVM-H.}
+\response{Response will be here.}
 
 \comment{10}{%
-Page 11, figure 4. Difficult to see the event labels in Figure 4.
+line 78 -> reduce -> acknowledge
 }
-
-\response{We change the labels to bold font, which should make them easier to see.}
+\response{Response will be here.}
 
 \comment{11}{%
-Page 12, line 58. On the left hand side of the relation, should this be ``$\tau_s$'' instead of ``$t_s$''?
+line 99 -> Is 0.5 degrees enough? To what distance do you do your ground motion calculations? In the western United States, they are done to 200 km. In the central and eastern, they are done to 1000 km. Depending on this value, you should include sources up to this distance from your region of interest.
 }
-
-\response{Yes. We fixed it.}
+\response{Response will be here.}
 
 \comment{12}{%
-Page 15, line 44--45. Replace ``originated'' with ``originating''.
+line106 -> northeast -> northwest
 }
-
-\response{Done.}
+\response{Response will be here.}
 
 \comment{13}{%
-Page 17, figure 6. The gray contour lines in Figures 6 and 7 mask some of the details. Maybe redo the figures without the gray lines, or use a thinner line.
+line 114 -> There is no previous mention of this earthquake. I am not sure to which earthquake you are referring. Should either the 1721 or 1780 earthquakes be the Shebli earthquake?
 }
-
-\response{We removed the contour lines in both figures.}
+\response{Response will be here.}
 
 \comment{14}{%
-Page 18, lines 46--50. Wording of this sentence is a bit awkward. Maybe redo with something like, ``These three events were selected because their locations sample different paths into the various basins and they are also large enough to generate significant motions throughout most of the simulation domain''.
+line 180 -> The smaller events should also help to inform the G-R relationship.
 }
-
-\response{We adopted the suggested wording. Thank you, it does read better.}
+\response{Response will be here.}
 
 \comment{15}{%
-Page 19, line 50. Replace ``faults'' with ``fault''.
+line 182 -> How come this study doesn't appear in Table 3. Do they not calculate PGA for 2 and 10\% exceedance in 50 years?
 }
-
-\response{Done.}
+\response{Response will be here.}
 
 \comment{16}{%
-Page 19, line 60. I think replacing ``validation'' with ``comparison'' would be more appropriate in this sentence.
+line 192 -> What is the total number of events before and after declustering?
 }
-
-\response{Agree. We changed it.}
+\response{Response will be here.}
 
 \comment{17}{%
-Page 20, line 22. Missing ``)'' at end of sentence.
+line 224 -> Why did you use this method? What are the benefits of one or the other?
 }
-
-\response{Fixed.}
+\response{Response will be here.}
 
 \comment{18}{%
-Page 20, line 35. Delete ``that free surface''.
+line 232 -> It is unclear how you chose Mc. In some cases, it looks like you chose the peak goodness-of-fit value, but in others you did not. Please be more specific about how Mc was chosen.
 }
-
-\response{Done. Thanks!}
+\response{Response will be here.}
 
 \comment{19}{%
-Page 21, line 6. Replace ``derivate'' with ``differentiate''.
+line 267 -> add ?and?
 }
-
-\response{Done.}
+\response{Response will be here.}
 
 \comment{20}{%
-Page 21, line 58. Should be ``equal to''.
+line 289 -> You might also cite the 2014 USGS National Model (Petersen et al., 2014) and the Afghanistan seismic hazard maps (Boyd et al, 2007), which include spatial variability in the smoothing parameter.
 }
-
-\response{Fixed.}
+\response{Response will be here.}
 
 \comment{21}{%
-Page 22, lines 7--9. Why not the beginning of the slip function? Admittedly, this is just a small shift.
+line 297 -> provided below ? provided in the next section
 }
-
-\response{Well... this was a suggestion of many years ago in a SCEC Annual Meeting in conversation with Carl Tape when we (Taborda and Bielak) first worked on the validation simulations of the Chino Hills earthquake. The rationale, as I (Taborda) remember it was based on the half rise-time being a reasonable compromise with respect to uncertainty about the rupture time as registered in the records' metadata. We do not believe it makes a major difference here, where the rise time is rather small for all events, and thus yes, it is admittedly a very small shift. For simulations of larger events with finite source models, however, this may be significant. In our experience with the previous Chino Hills simulations (Taborda and Bielak, 2013, 2014) where a finite source was used, this assumption yielded good results. But perhaps this may need to be evaluated more carefully.}
+\response{Response will be here.}
 
 \comment{22}{%
-Page 22, line 54. Replace ``this type'' with ``these types''.
+line 300 -> allows one to draw information ? allows to draw information 
 }
-
-\response{Done.}
+\response{Response will be here.}
 
 \comment{23}{%
-Page 26, line 47. Maybe ``MODEL'' instead of ``MODELS''.
+line 323 -> Be more specific about how HA3 computes b and Mmax. What is its method?
 }
-
-\response{We actually think is appropriate to use the plural here. We will keep it this way unless the editorial team suggests different.}
+\response{Response will be here.}
 
 \comment{24}{%
-Page 29, line 35. Replace ``Fig. 11'' with ``Fig. 13''.
+line 335 -> Different seismic zone will not necessarily have difference values of b and Mmax. Change to this: Different seismic zone may have different values of b and Mmax.
 }
-
-\response{Done.}
+\response{Response will be here.}
 
 \comment{25}{%
-Page 29, line 40. Replace ``is'' with ``are''.
+line 337 -> a means to reduce epistemic ? a means to account for epistemic 
 }
-
-\response{Done.}
+\response{Response will be here.}
 
 \comment{26}{%
-Page 29, line 53. Replace ``derived'' with ``derived from''.
+line 361 -> lead -> leads
 }
-
-\response{Done.}
+\response{Response will be here.}
 
 \comment{27}{%
-Page 31, line 48. Caption of Fig. 15 states only top 20 events are used for average. Please check and correct.
+line 364 -> How do you address the epistemic uncertainty generally introduced by using a suite of GMPEs?
 }
-
-\response{The caption of the figure stands correct. We modified the text (now in page 32) to be in agreement with the figure.}
+\response{Response will be here.}
 
 \comment{28}{%
-Page 32, line 35. Replace ``even'' with ``event''.
+line 365: add ?and?
 }
-
-\response{Done.}
+\response{Response will be here.}
 
 \comment{29}{%
-Page 32, line 36. Replace ``station'' with ``stations''.
+line 370 -> Could you consider other depths to help fill out your range of epistemic uncertainty?
 }
-
-\response{Done.}
+\response{Response will be here.}
 
 \comment{30}{%
-Page 32, line 39. Replace ``dotes'' with ``dots''.
+line 371 -> How does this value compare with the models you decided not to use?
 }
-
-\response{Done.}
+\response{Response will be here.}
 
 \comment{31}{%
-Page 32, lines 52--54. Maybe replace ``showed to be independent to'' with ``do not correlate with''.
+line 376 -> In this case, you should consider all sources with 200 km of your area of interest.
 }
-
-\response{We adopted this suggestion. Thanks.}
+\response{Response will be here.}
 
 \comment{32}{%
-Page 33, line 12. Change ``not'' to ``no''.
+line 394:  50-years -> 50-year
 }
-
-\response{Done.}
+\response{Response will be here.}
 
 \comment{33}{%
-Page 33, line 13. Change ``the basin's depth'' to ``basin depth''.
+line 420 -> with concentration ? with a concentration
 }
-
-\response{Done.}
+\response{Response will be here.}
 
 \comment{34}{%
-Page 33, line 28. Maybe change ``model'' to ``GTL model'' just for clarity.
+line 422 -> I would have stated this differently. It looks like the lower b-value in Kopeh Dagh yields relatively high hazard in the R model whereas in the U model, this low b-value has leaked into the entire region and subsequently elevated seismic hazard in all areas outside of Kopeh Dagh.
 }
-
-\response{Yes, thank you.}
+\response{Response will be here.}
 
 \comment{35}{%
-Page 33, line 32. I think CVM-S4, and therefore CVM-S4.26, do, in fact, include a GTL model (see Magistrale et al.~2000). It is just not as comprehensive or sophisticated as the Ely Vs30-based GTL approach. My suggestion is to replace ``GTL model'' with ``more comprehensive GTL model''.
+line 428 -> Why equal weights?
 }
-
-\response{While we have differences in our understanding of what constitutes a GTL model in a CVM, we recognize that this clearer wording can help the reader, and thus we adopted the suggestion. Thank you.}
+\response{Response will be here.}
 
 \comment{36}{%
-Page 33, line 39. Delete ``the region of''.
+line 431 -> I'm not sure I quite understand this. The standard deviation in the attenuation relation is considered aleatory uncertainty and is present within the hazard curve. Adding it as epistemic as well will cause double counting. If you want to include figure 10, a proper logic tree analysis to include more forms of epistemic uncertainty should be performed. For example, add branches for uncertainty in which GMPE you choose, uncertainty in b-value, uncertainty in Mmax, uncertainty in a-value, uncertainty in smoothing parameter, etc.
 }
-
-\response{Done.}
-
-\comment{36}{%
-Page 33, line 41. Maybe change ``velocity'' to ``seismic velocity'' just for clarity at the beginning of this section.
-}
-
-\response{Done.}
+\response{Response will be here.}
 
 \comment{37}{%
-Page 33, line 43. Replace ``of fits'' with ``fit''.
+line 434 -> Just because the basic pattern appears to better follow faults in the region does not mean it's a better assessment, especially if the b-values are truly different between regions and better represented by the regional analysis.
 }
-
-\response{Done.}
+\response{Response will be here.}
 
 \comment{38}{%
-Page 33, line 45. Delete ``simulation''.
+line 439: of city of Tabriz -> of the city of Tabriz.
 }
-
-\response{Done.}
+\response{Response will be here.}
 
 \comment{39}{%
-Page 33, lines 54--56. Related to my point in comment \#2, I think this sentence would be more correct if the word ``validation'' were removed.
+line 450 ->  for 2 and 10\%, respectively ? for 2 and 10\% in 50 years, respectively.
 }
-
-\response{Agree. We removed the word ``validation''.}
+\response{Response will be here.}
 
 \comment{40}{%
-Page 34, figure 15 caption. Text states all events are used in average. Please check.
+line 453 ->  for a 10\% probability of exceedance ?  for a 10\% probability of exceedance in 50 years.
 }
-
-\response{See our response to comment 27.}
+\response{Response will be here.}
 
 \comment{41}{%
-Page 34, line 44. As long as the input model to the inversion is reasonably good. Which the results here suggest that CVM-S4 is a reasonably good starting model. I think it would be worthwhile to point this out.
+line 455 -> 0.27-0.31 g for 10\% probability of exceedance ->  0.27-0.31 g for the same exceedance probability
 }
-
-\response{Agree. We added a note in the conclusions to reflect this.}
+\response{Response will be here.}
 
 \comment{42}{%
-Page 35, figure 16 caption. Change ``SC'' to ``SB''.
+line 458 ->  for 2 and 10\% ? for 2 and 10\% in 50 years
 }
-
-\response{Done.}
+\response{Response will be here.}
 
 \comment{43}{%
-Page 35, line 59. Again, I believe that CVM-S4.26 already has some sort of GTL. I suggest modifying the text here to read ``more
-detailed geotechnical''.
+line 461 -> our results are close or within ? our results are close to or within 
 }
+\response{Response will be here.}
 
-\response{We modified the sentence to adopt this suggestion.}
 
 \comment{44}{%
-Page 35, line 60. Delete ``additional''.
+line 462 -> Can you explain the differences in their analysis relative to yours that lead to higher values?
 }
-
-\response{Done.}
+\response{Response will be here.}
 
 \comment{45}{%
-Page 36, line 7. Maybe change ``considering'' to ``possibly including''.
-}
-
-\response{Thank you for this suggestion. We changed the wording.}
+line 466 -> exceedance as functions of PGA ? exceedance as functions of PGA, also known as hazard curves}
+\response{Response will be here.}
 
 \comment{46}{%
-Page 36, lines 9--11. Change to ``as sufficient data become available''.
-}
+line 475 -> Can you explain the differences in the hazard analysis that led to differences in hazard?}
+\response{Response will be here.}
 
-\response{Fixed.}
+\comment{47}{%
+line 462 -> Can you explain the differences in their analysis relative to yours that lead to higher values?
+}
+\response{Response will be here.}
+
+\comment{48}{%
+lline 488 -> Not sure you can say this because you don't include fault specific sources, and you do not consider a more full range of epistemic uncertainty, e.g. you only use one GMPE (though you do consider two b-value and Mmax based models).
+}
+\response{Response will be here.}
+
+\comment{49}{%
+line 488 -> hazard analysis ? hazard analyses
+}
+\response{Response will be here.}
+
+\comment{50}{%
+line 490 -> models as a mean ? models as a means}
+\response{Response will be here.}
+
+\comment{51}{%
+line 493 -> Though you suggest the uniform model is unrealistic on line 334.}
+\response{Response will be here.}
+
+\comment{52}{%
+line 502 -> for providing advise ? for providing advice}
+\response{Response will be here.}
+
+\comment{53}{%
+line 509 ->  Should this be Sunset?}
+\response{Response will be here.}
+
+\comment{54}{%
+p 25 ? table2 -> What did you do for the earthquakes occurring outside of these five zones?}
+\response{Response will be here.}
+
+\comment{55}{%
+p 26 ? table3 -> Specify units.}
+\response{Response will be here.}
+
+\comment{56}{%
+p32 ? figure 3 -> You should also show events in the buffer zone used to compute hazard.}
+\response{Response will be here.}
+
+\comment{57}{%
+p34 ? figure 5 -> Which seismic zone corresponds to which color? It looks like either reporting or rates have changed over time. For example, I might argue that the red region was not complete for M3 and above until 2005. }
+\response{Response will be here.}
+
+\comment{58}{%
+P37: 10 percent of probability -> 10 percent probability }
+\response{Response will be here.}
+
+\comment{59}{%
+p 39 ? figure 11 -> Include horizontal lines indicating 2 and 10\% probability of exceedance in 50 years.}
+\response{Response will be here.}
+
+\comment{60}{%
+p 39 ? figure 11 -> p 41 ? figure 12 -> Can you include curves or points for the other studies in Table 3?}
+\response{Response will be here.}
+
 
 \end{document}
