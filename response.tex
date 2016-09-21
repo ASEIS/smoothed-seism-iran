@@ -1,0 +1,364 @@
+
+\setlength{\paperwidth}{210mm}
+\setlength{\paperheight}{297mm}% fixed.
+
+\documentclass{article}
+
+\usepackage[review]{myreviewpckg}
+\usepackage{simplemargins}
+
+\clubpenalty=10000  % Orphan - First of paragraph left behind
+\widowpenalty=10000 % Widow  - Last of paragraph sent ahead
+
+\setallmargins{1in}
+
+\begin{document}
+
+\begin{center}
+	\bf
+	\large
+	Authors' Response to Reviewer 1 (Anonymous)
+\end{center}
+
+\noindent
+We thank the reviewer for his/her comments and suggestions, which helped us improve the manuscript. To help the review process, in the annotated manuscript version of the paper, we have highlighted the changes that resulted from these comments in green colored font when appropriate. In the following, we provide a response to each comment. The original comments are in italic black font, followed by our responses in regular blue font.
+\vspace{2ex}
+\newline 
+
+\introcomment{~}{%
+Objective of this paper is quantitative evaluation of the validity of the four different 3D velocity structure model in southern California by means of numerical simulation of ground motions from observed earthquakes. They tested 30 moderate sized earthquakes, and showed the GOF in the various presentations including event average and station average. Finally, they concluded that CVMS4.26 yielded the better results among four tested models. Overall, this paper is quite well written, and materials presented in this paper is informative. The results of this paper will benefit to the community. I have some comments to further improve the significance of their study.
+}
+
+\comment{1}{%
+The authors showed the spatial distribution of GOF on tha mep in Figures 9, 10, 11, and 15. Actual GOF values were obtained only at stations where observed records were available. The authors spatially interpolated GOF values to draw the map. However, I think it is not a good representation of the results. Because the stations were not uniformly distributed, some isolated stations had stronger impact on these maps. It controls the impression of these figures. I think that color representing GOF should be given only inside the symbol (i.e. circle) representing individual stations, and the area without station should not be colored.
+}
+
+\response{%
+The reviewer brings an important point to the table. We did consider this option in the past---in two previous publications by the leading author---and rejected it. The major issue with the suggested format is that the symbols (e.g., circles) would have to be large enough in order for the colors to be noticeable. This is fine if the stations are sufficiently scattered throughout the domain at somewhat even distances from each other. Unfortunately, that is not the case. A good number of stations are in (very) close proximity to each other---specially in the basin area---and then the size of the symbols becomes an issue. One is then left with no good option. If the symbols are made small enough to avoid overlapping, the color is not visible; and if they are large enough for the color to be noticeable, then they will often overlap. Both options lead to a more difficult interpretation of the results than the imperfect option of the surface interpolation. In addition, as mentioned in the manuscript, the format chosen to present the results in these figures has already been used in two previous publications (Taborda and Bielak, 2013, 2014). This is an advantage because consistency allows one to look back at previous results and appreciate the differences and improvements achieved over the years. Furthermore, this or other similar formats have been used or adopted by other authors (e.g., Olsen and Mayhew, 2010; Lee et al.~2015). All things considered, we have added a comment when presenting the results of the first figure to make explicit the fact that the interpolation is artificial. Please see page 25.
+}
+
+\comment{2}{%
+As shown in Figures 8 and 9, GOF values for the same station have large deviation. Thus, the information on the standard deviation among events can be added to Figure 15. I think this point is very important in this kind of study, and possible reasons for obtaining large GOF deviation for the same station using the same 3D velocity model needs to be addressed in deep by the authors. Since, the same 3D velocity model are used in the numerical simulation, the validity of source model might affect this comparison. The calibration and validation of the source models should be adequately given in this paper.
+}
+
+\response{%
+We thank the reviewer for pointing this out. Indeed, the standard deviation at the individual stations is a matter of importance. We had this information at our disposal but did not realize it was worth including it in the manuscript in the form of a figure. We now present this information in the new Figure 16, which illustrates the variance in the average scores obtained for each station in the form of the unbiased sample standard deviation. A comment on the results presented in this new figure is now included in pages 33 and 34.
+}
+
+\newpage
+
+\begin{center}
+	\bf
+	\large
+	Authors' Response to Reviewer 2 (Robert Graves)
+\end{center}
+
+\noindent
+We thank the reviewer for his comments and suggestions, which helped us improve the manuscript. To help the review process, in the annotated manuscript version of the paper, we have highlighted the changes that resulted from these comments in green colored font when appropriate. In the following, we provide a response to each comment. The original comments are in italic black font, followed by our responses in regular blue font.
+\vspace{2ex}
+\newline 
+
+\introcomment{~}{%
+This paper presents an analysis of 3D ground motion simulations for 30 earthquakes in the Los Angeles basin region that were computed using four different 3D seismic velocity models. The goal of the analysis is to compare the results obtained with the different models to see which models, or parts thereof, perform better, and to provide a baseline for comparison of future model iterations.
+}
+
+\introcomment{~}{%
+This paper is very well written, interesting and informative and my view of this work is quite favorable. I think the paper is worthy of publication after some minor revision.
+}
+
+\introcomment{~}{%
+My main general comment has to do with the use of the word ``validation'' that appears throughout the manuscript. In a number of these instances, I feel it would be more appropriate if the term ``validation'' were replaced with the term ``assessment'' (or something similar, like ``evaluation''). To me, the ``validation'' of something implies it to be true (e.g., I validated your parking permit), whereas the assessment of something simply means it is being analyzed and its performance possibly ranked with respect to something else. Most of what is done in this paper is an assessment of the simulation results, since in the end, none of the velocities models is truly “validated”. This assessment process is nonetheless very important in that it provides a relative measure of the performance of each of the velocity models. I would suggest the authors consider using a different term as they go through the revision of the paper.
+}
+
+\response{
+We understand and agree, to some extent, with the points raised here by the reviewer. Our intention was to evaluate the models, or assess the model, through a validation of the simulations. We believe the word validation is well used here when referring to the comparisons of the synthetics with data in the same sense in which the terms ``validation'' and ``verification'' has been defined in other publications such as Bielak et al.~(2010) or Taborda and Bielak (2013). That said, the author stands correct in that we may have been abused the use of the word in several instances when we were not being specific about the validation of the individual simulations themselves, but through them, we were actually evaluating the models. In this spirit we have welcomed and adopted most if not all the suggestions by the reviewer in this regard, including the change in the title, which makes it simpler and more to the point. These changes are documented in the answers to the individual comments below.
+}
+
+\introcomment{~}{%
+A detailed listing of all my specific comments is included in the accompanying marked-up copy of the manuscript.
+}
+
+\comment{1}{%
+Page 1, title. The phrasing ``validation of recorded events'' does not sound correct. The events are real and the records are true data, therefore they are not being validated (we assume them to be valid). I think the title would be more appropriate if the words ``and Validation'' were removed.
+}
+
+\response{The suggested change to the title was adopted.}
+
+\comment{2}{%
+Page 2. General comment on the use of the term ``validation''. In a number of places in this paper, I feel it would be more appropriate if the term ``validation'' were replaced with the term ``assessment'' (or something similar, like ``evaluation''). To me, the ``validation'' of something implies it to be true (e.g., I validated your parking permit), whereas the assessment of something simple means it is being analyzed. Most of what is done in this paper is an assessment of the simulation results, which is nonetheless very important in that it provides a relative measure of the performance of each of the velocity models.
+}
+
+\response{We introduced a small change in the abstract and other similar changes in several other places throughout the manuscript to better express the essence of the comparisons done in light of the point raised by the reviewer. Also see our response to other comments below.}
+
+\comment{3}{%
+Page 4, line 17. Replace with ``collection of recorded''
+}
+
+\response{Fixed.}
+
+\comment{4}{%
+Page 5, figure 1. Difficult to see the labels ``A'', ``B'' and ``C'' in Figure 1c.
+}
+
+\response{The labels are now framed in a circle with white background. This should make them more visible.}
+
+\comment{5}{%
+Page 6, line 20--24. I'm not sure what this means. Can you explain further?
+}
+
+\response{We eliminated this sentence. A better explanation is out of the scope of the paper and is not of major relevance. We took this opportunity, instead, to make clarity about the fact that the model CVM-S4.26 as used here is in fact a modification of the raw model that resulted from the inversion done on top of CVM-S4. We did this in consultation with colleagues from SCEC to satisfy recent changes in the nomenclature of the models.}
+
+\comment{6}{%
+Page 6, line 41. Delete ``In turn''.
+}
+
+\response{Done.}
+
+\comment{7}{%
+Page 10, line 12. Should be ``BC''.
+}
+
+\response{Fixed.}
+
+\comment{8}{%
+Page 10, line 38. The event IDs are a unique and vitally important component of the data archival system used by the Southern California Seismic Network. Please add a citation to the Southern California Earthquake Data Center, i.e., SCEDC (2013): SCEDC (2013). Southern California Earthquake Center, Caltech, Dataset, doi:10.7909/C3WD3xH1
+}
+
+\response{Citation to SCEDC is now included.}
+
+\comment{9}{%
+Page 10, lines 41--43. Is Lee et al. (2011) the correct reference as several of the events occurred after the publication date of this paper? Also, does this mean that all of the events considered in the current analysis were also used in the 3D tomographic inversion to develop CVM-S4.26? And, how many of these events were also used in the 3D tomographic updates to CVM-H?
+}
+
+\response{We modified the text to provide a better explanation. Yes, all the events considered here were used in the inversions that led to CVM-S4.26. In total, 17 of the 30 events were also used in the 3D tomographic updates to CVM-H. In addition to the text, we also modified the table to provide information about which of these events were used in CVM-H.}
+
+\comment{10}{%
+Page 11, figure 4. Difficult to see the event labels in Figure 4.
+}
+
+\response{We change the labels to bold font, which should make them easier to see.}
+
+\comment{11}{%
+Page 12, line 58. On the left hand side of the relation, should this be ``$\tau_s$'' instead of ``$t_s$''?
+}
+
+\response{Yes. We fixed it.}
+
+\comment{12}{%
+Page 15, line 44--45. Replace ``originated'' with ``originating''.
+}
+
+\response{Done.}
+
+\comment{13}{%
+Page 17, figure 6. The gray contour lines in Figures 6 and 7 mask some of the details. Maybe redo the figures without the gray lines, or use a thinner line.
+}
+
+\response{We removed the contour lines in both figures.}
+
+\comment{14}{%
+Page 18, lines 46--50. Wording of this sentence is a bit awkward. Maybe redo with something like, ``These three events were selected because their locations sample different paths into the various basins and they are also large enough to generate significant motions throughout most of the simulation domain''.
+}
+
+\response{We adopted the suggested wording. Thank you, it does read better.}
+
+\comment{15}{%
+Page 19, line 50. Replace ``faults'' with ``fault''.
+}
+
+\response{Done.}
+
+\comment{16}{%
+Page 19, line 60. I think replacing ``validation'' with ``comparison'' would be more appropriate in this sentence.
+}
+
+\response{Agree. We changed it.}
+
+\comment{17}{%
+Page 20, line 22. Missing ``)'' at end of sentence.
+}
+
+\response{Fixed.}
+
+\comment{18}{%
+Page 20, line 35. Delete ``that free surface''.
+}
+
+\response{Done. Thanks!}
+
+\comment{19}{%
+Page 21, line 6. Replace ``derivate'' with ``differentiate''.
+}
+
+\response{Done.}
+
+\comment{20}{%
+Page 21, line 58. Should be ``equal to''.
+}
+
+\response{Fixed.}
+
+\comment{21}{%
+Page 22, lines 7--9. Why not the beginning of the slip function? Admittedly, this is just a small shift.
+}
+
+\response{Well... this was a suggestion of many years ago in a SCEC Annual Meeting in conversation with Carl Tape when we (Taborda and Bielak) first worked on the validation simulations of the Chino Hills earthquake. The rationale, as I (Taborda) remember it was based on the half rise-time being a reasonable compromise with respect to uncertainty about the rupture time as registered in the records' metadata. We do not believe it makes a major difference here, where the rise time is rather small for all events, and thus yes, it is admittedly a very small shift. For simulations of larger events with finite source models, however, this may be significant. In our experience with the previous Chino Hills simulations (Taborda and Bielak, 2013, 2014) where a finite source was used, this assumption yielded good results. But perhaps this may need to be evaluated more carefully.}
+
+\comment{22}{%
+Page 22, line 54. Replace ``this type'' with ``these types''.
+}
+
+\response{Done.}
+
+\comment{23}{%
+Page 26, line 47. Maybe ``MODEL'' instead of ``MODELS''.
+}
+
+\response{We actually think is appropriate to use the plural here. We will keep it this way unless the editorial team suggests different.}
+
+\comment{24}{%
+Page 29, line 35. Replace ``Fig. 11'' with ``Fig. 13''.
+}
+
+\response{Done.}
+
+\comment{25}{%
+Page 29, line 40. Replace ``is'' with ``are''.
+}
+
+\response{Done.}
+
+\comment{26}{%
+Page 29, line 53. Replace ``derived'' with ``derived from''.
+}
+
+\response{Done.}
+
+\comment{27}{%
+Page 31, line 48. Caption of Fig. 15 states only top 20 events are used for average. Please check and correct.
+}
+
+\response{The caption of the figure stands correct. We modified the text (now in page 32) to be in agreement with the figure.}
+
+\comment{28}{%
+Page 32, line 35. Replace ``even'' with ``event''.
+}
+
+\response{Done.}
+
+\comment{29}{%
+Page 32, line 36. Replace ``station'' with ``stations''.
+}
+
+\response{Done.}
+
+\comment{30}{%
+Page 32, line 39. Replace ``dotes'' with ``dots''.
+}
+
+\response{Done.}
+
+\comment{31}{%
+Page 32, lines 52--54. Maybe replace ``showed to be independent to'' with ``do not correlate with''.
+}
+
+\response{We adopted this suggestion. Thanks.}
+
+\comment{32}{%
+Page 33, line 12. Change ``not'' to ``no''.
+}
+
+\response{Done.}
+
+\comment{33}{%
+Page 33, line 13. Change ``the basin's depth'' to ``basin depth''.
+}
+
+\response{Done.}
+
+\comment{34}{%
+Page 33, line 28. Maybe change ``model'' to ``GTL model'' just for clarity.
+}
+
+\response{Yes, thank you.}
+
+\comment{35}{%
+Page 33, line 32. I think CVM-S4, and therefore CVM-S4.26, do, in fact, include a GTL model (see Magistrale et al.~2000). It is just not as comprehensive or sophisticated as the Ely Vs30-based GTL approach. My suggestion is to replace ``GTL model'' with ``more comprehensive GTL model''.
+}
+
+\response{While we have differences in our understanding of what constitutes a GTL model in a CVM, we recognize that this clearer wording can help the reader, and thus we adopted the suggestion. Thank you.}
+
+\comment{36}{%
+Page 33, line 39. Delete ``the region of''.
+}
+
+\response{Done.}
+
+\comment{36}{%
+Page 33, line 41. Maybe change ``velocity'' to ``seismic velocity'' just for clarity at the beginning of this section.
+}
+
+\response{Done.}
+
+\comment{37}{%
+Page 33, line 43. Replace ``of fits'' with ``fit''.
+}
+
+\response{Done.}
+
+\comment{38}{%
+Page 33, line 45. Delete ``simulation''.
+}
+
+\response{Done.}
+
+\comment{39}{%
+Page 33, lines 54--56. Related to my point in comment \#2, I think this sentence would be more correct if the word ``validation'' were removed.
+}
+
+\response{Agree. We removed the word ``validation''.}
+
+\comment{40}{%
+Page 34, figure 15 caption. Text states all events are used in average. Please check.
+}
+
+\response{See our response to comment 27.}
+
+\comment{41}{%
+Page 34, line 44. As long as the input model to the inversion is reasonably good. Which the results here suggest that CVM-S4 is a reasonably good starting model. I think it would be worthwhile to point this out.
+}
+
+\response{Agree. We added a note in the conclusions to reflect this.}
+
+\comment{42}{%
+Page 35, figure 16 caption. Change ``SC'' to ``SB''.
+}
+
+\response{Done.}
+
+\comment{43}{%
+Page 35, line 59. Again, I believe that CVM-S4.26 already has some sort of GTL. I suggest modifying the text here to read ``more
+detailed geotechnical''.
+}
+
+\response{We modified the sentence to adopt this suggestion.}
+
+\comment{44}{%
+Page 35, line 60. Delete ``additional''.
+}
+
+\response{Done.}
+
+\comment{45}{%
+Page 36, line 7. Maybe change ``considering'' to ``possibly including''.
+}
+
+\response{Thank you for this suggestion. We changed the wording.}
+
+\comment{46}{%
+Page 36, lines 9--11. Change to ``as sufficient data become available''.
+}
+
+\response{Fixed.}
+
+\end{document}
