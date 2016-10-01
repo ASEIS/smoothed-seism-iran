@@ -1,6 +1,6 @@
 
 FILEONE=$1
-FILETWO=uniform_$1
+FILETWO=$2
 CPTFILE=tmp.cpt
 OUTFILE=tmp.ps
 GRDFILE1=tmp1.grd
