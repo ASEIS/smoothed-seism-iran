@@ -102,7 +102,7 @@ Pp 10, line 302: " ... subjective decisions and any reasonable choice ...  " I w
 }
 
 \response{%
-Response will be here.
+We added the logic tree to the study to consider the epistemic uncertainty, instead of giving the range of uncertainty. In practice, we define the grids for the whole region, however, estimate the $a-value$ and also the probability of exceedance for each region, separately. To do that, in each run we just provide the seismic source data ( in this case location and magnitude) for the specific region. Based on the logic tree approach we conducted 162 runs to get the results $(3 M * 3 B * 6 R(5 region+1 uniform)*3 GMPE)$.
 }
 
 \comment{9}{%
@@ -126,7 +126,7 @@ Pp 12, line 345: "... controls the spatial extent to which the local occurrence 
 }
 
 \response{%
-Response will be here.
+Thanks. Modified it. 
 }
 
 \comment{12}{%
@@ -138,11 +138,11 @@ Done.
 }
 
 \comment{13}{%
-The approach to generating Figure 10 should be clarified. It appears that the probabilistic ground motions from the R and U model are averaged and used to compute a standard deviation. The formal method for combining alternative models in PSHA is through the logic tree; this is equivalent to weighting the models in hazard (rate) space, rather than in ground motion (intensity, PGA) space. It appears that the authors have done the latter, though I may be incorrect. If this is the case, please correct. It is very reasonable to combine the R and U models to produce another alternative model. This work is not a comprehensive seismic hazard analysis, and presentation of probabilistic ground motions from the R, U and a weighted model would be reasonable goal. However, I would caution against comparing probabilistic ground motion maps with maps of seismicity because the varying b- and Mmax-values for the R model greatly complicate the comparison. As mentioned earlier, formal testing methods exist for ensuring consistency of observed earthquake locations with the smoothed seismicity models (see CSEP references?Zechar, Schorlemmer, Werner, Helmstetter, Jackson; Moschetti, 2015). Applying these methods is beyond the scope of this work, but might be recognized as a future direction.
+The approach to generating Figure 10 should be clarified. It appears that the probabilistic ground motions from the R and U model are averaged and used to compute a standard deviation. The formal method for combining alternative models in PSHA is through the logic tree; this is equivalent to weighting the models in hazard (rate) space, rather than in ground motion (intensity, PGA) space. It appears that the authors have done the latter, though I may be incorrect. If this is the case, please correct. It is very reasonable to combine the R and U models to produce another alternative model. This work is not a comprehensive seismic hazard analysis, and presentation of probabilistic ground motions from the R, U and a weighted model would be reasonable goal. However, I would caution against comparing probabilistic ground motion maps with maps of seismicity because the varying b- and Mmax-values for the R model greatly complicate the comparison. As mentioned earlier, formal testing methods exist for ensuring consistency of observed earthquake locations with the smoothed seismicity models (see CSEP references, Zechar, Schorlemmer, Werner, Helmstetter, Jackson; Moschetti, 2015). Applying these methods is beyond the scope of this work, but might be recognized as a future direction.
 }
 
 \response{%
-Response will be here.
+Thanks for the informative comment. In Figure 10, we combined the regional (R) and uniform (U) results (We combine the probability of exceedance, then compute the pga)  with similar weights (i.e., 0.5). The positive and negative standard deviation plots comes from GMPE+Uncertainty  and GMPE-Uncertainty. We were showing the range of variation for PGA around the median value. As we discussed before, in order to consider the epistemic uncertainty, instead of presenting the range of uncertainty, we used the logic tree approach and modified Figure 10. The weights are presented in logic tree figure.
 }
 
 \newpage
@@ -170,13 +170,13 @@ In this paper, the researchers present a new seismic hazard analysis of northern
 The authors present uncertainty in their hazard estimate but do not include a more exhaustive logic tree analysis. Effectively, they have two branches: a regional model and uniform model. It appears that they apply the aleatory uncertainty in the ground motion prediction relation to a form of epistemic uncertainty, effectively double counting this uncertainty in the hazard analysis. I would prefer to see a more standard logic tree analysis where multiple GMPEs (or a backbone plus and minus one standard deviation) and uncertainty in a-value, b-value, and Mmax, for example, are considered. Barring this analysis, I would remove figure 10 and references to hazard uncertainty.
 }
 
-\response{Thanks for the comment.  Based on explanation of GMPEs section (please see comment no.?) we decided to define a suite of GMPE and also provide the uncertainty. We consider the epistemic uncertainty, based on defining two different model (which considers the uncertainty in $b-value$ and $M_max$). In order to make it clear we added two GMPE suites (plus and minus one standard deviation) also we defined the uncertainty in $M_{max}$. This approach will cover the most of uncertainty in the study.}. 
+\response{Thanks for the comment.  Based on explanation of GMPEs section (please see comment no.?) we decided to define a suite of GMPE as well as plus and minus one standard deviation. We consider the epistemic uncertainty in tectonic seismic regions, $M_{max}$, $b-value$, and attenuation relationship through a standard logic tree analysis.}. 
 
 \comment{2}{%
 While I think that the regional and uniform models are generally correct within 1.5 degrees of the border, I think that outside of this region, they may be moderately underestimating hazard by not considering sources with 200 km of their region of interest. Their buffer zone for sources is presently 50 km.
 }
 
-\response{That right. We increased the buffer zone up to 2 degrees. (Haven't modified the text)}
+\response{That is right. We increased the buffer zone up to 2 degrees. (Haven't modified the text)}
 
 \comment{3}{%
 It would be good if the abstract is more specific about the results. Where is the hazard greatest? What sources contribute to regions of higher hazard?
@@ -186,7 +186,7 @@ It would be good if the abstract is more specific about the results. Where is th
 \comment{4}{%
 In the second paragraph of the introduction, I would include a reference to a figure of the region to help readers less familiar with the area. This figure should also be referred to in subsequent paragraphs. It is probably sufficient to move reference to figure 1 here.
 }
-\response{Response will be here.}
+\response{We  added the reference for figure 1. Thanks.}
 
 \comment{5}{%
 line 39:   eight  $\to$ eighth
@@ -241,7 +241,7 @@ line 180 $\to$ The smaller events should also help to inform the G-R relationshi
 \comment{15}{%
 line 182 $\to$ How come this study doesn't appear in Table 3. Do they not calculate PGA for 2 and 10\% exceedance in 50 years?
 }
-\response{Response will be here.}
+\response{They didn't provide a numerical value, or numbers on the contour lines, however, we read the images with Matlab and locate the values. We added to the table. Thanks.}
 
 \comment{16}{%
 line 192 $\to$ What is the total number of events before and after declustering?
@@ -286,7 +286,7 @@ line 323 $\to$ Be more specific about how HA3 computes b and Mmax. What is its m
 \comment{24}{%
 line 335 $\to$ Different seismic zone will not necessarily have difference values of b and Mmax. Change to this: Different seismic zone may have different values of b and Mmax.
 }
-\response{Response will be here.}
+\response{Modified. Thanks.}
 
 \comment{25}{%
 line 337 $\to$ a means to reduce epistemic $\to$ a means to account for epistemic 
@@ -341,7 +341,7 @@ line 422 $\to$ I would have stated this differently. It looks like the lower b-v
 \comment{35}{%
 line 428 $\to$ Why equal weights?
 }
-\response{Response will be here.}
+\response{We added a comprehensive logic tree analysis after revision.}
 
 \comment{36}{%
 line 431 $\to$ I'm not sure I quite understand this. The standard deviation in the attenuation relation is considered aleatory uncertainty and is present within the hazard curve. Adding it as epistemic as well will cause double counting. If you want to include figure 10, a proper logic tree analysis to include more forms of epistemic uncertainty should be performed. For example, add branches for uncertainty in which GMPE you choose, uncertainty in b-value, uncertainty in Mmax, uncertainty in a-value, uncertainty in smoothing parameter, etc.
@@ -434,7 +434,7 @@ p 25, table2 $\to$ What did you do for the earthquakes occurring outside of thes
 
 \comment{55}{%
 p 26, table3 $\to$ Specify units.}
-\response{Response will be here.}
+\response{Done. Thanks.}
 
 \comment{56}{%
 p32, figure 3 $\to$ You should also show events in the buffer zone used to compute hazard.}
@@ -442,7 +442,7 @@ p32, figure 3 $\to$ You should also show events in the buffer zone used to compu
 
 \comment{57}{%
 p34, figure 5 $\to$ Which seismic zone corresponds to which color? It looks like either reporting or rates have changed over time. For example, I might argue that the red region was not complete for M3 and above until 2005. }
-\response{Response will be here.}
+\response{Thanks for the comment. The problem with that region is having less than and equal sign on magnitude 4. There are many earthquakes go to that category because of that condition. Since, converting earthquake magnitude always has an error margin, we think the comment is relevant. Based on the data we assume 2005 as a completeness magnitude. We presented the legends at the bottom of the figure.}
 
 \comment{58}{%
 P37: 10 percent of probability $\to$ 10 percent probability }
@@ -454,11 +454,11 @@ p 39,figure 11: Include horizontal lines indicating 2 and 10\% probability of ex
 
 \comment{60}{%
 p 41, figure 12: Can you include curves or points for the other studies in Table 3?}
-\response{Response will be here.}
+\response{Added.}
 
 
 \introcomment{~}{%
-Summary of modifications (Remove before submitting)\\
+Summary of modifications (May or may not addressed as comment.)\\
 - Buffer zone updated.\\
 - Data updated.\\
 - b-values updated.\\
@@ -470,6 +470,8 @@ Summary of modifications (Remove before submitting)\\
 - Figure 6: Updated data completeness plots added to the figure. Figure needs final polishing. \\
 - Figure 7: Updated.\\
 - Figure 11: Updated.\\ 
+- Figure 8: Updated.\\
+- Figure 10: Updated.\\
 }
 
 \end{document}
