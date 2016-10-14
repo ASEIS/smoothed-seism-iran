@@ -14,6 +14,10 @@
 \usepackage[left,displaymath,running]{lineno}
 \usepackage[tablesfirst,notablist]{endfloat}
 
+% Revision format added 
+\usepackage[dvipsnames]{xcolor}
+\newcommand{\myrevision}[1]{\textcolor{ForestGreen}{#1}}
+
 \setallmargins{1in}
 
 \renewcommand{\abstractnamefont}{\normalfont\Large\bfseries\raggedright}
@@ -37,7 +41,7 @@
 \setlength{\cftparskip}{2ex}
 \renewcommand\cftfigpresnum{\bf Figure~}
 \renewcommand\cftfigaftersnum{.}
-\renewcommand\cftfignumwidth{5.5em}	
+\renewcommand\cftfignumwidth{5.5em}
 
 \clubpenalty=10000  % Orphan - First of paragraph left behind
 \widowpenalty=10000 % Widow  - Last of paragraph sent ahead
