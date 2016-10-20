@@ -17,28 +17,28 @@
 \begin{center}
 	\bf
 	\large
-	Authors' Response to Reviewer 1 
+	Authors' Response to Reviewer 1
 \end{center}
 
 \noindent
 We thank the reviewer for his/her comments and suggestions, which helped us improve the manuscript. To help the review process, in the annotated manuscript version of the paper, we have highlighted the changes that resulted from these comments in green colored font when appropriate. In the following, we provide a response to each comment. The original comments are in italic black font, followed by our responses in regular blue font.
 \vspace{2ex}
-\newline 
+\newline
 
 \introcomment{~}{%
 The authors perform a seismic hazard analysis for northern Iran using a newly developed source model from smoothed seismicity. The work is an important contribution to seismic hazard analyses in Iran. Development of the seismic source model follows a careful analysis of the earthquake catalogs for information about spatially varying earthquake rates, maximum magnitudes and b-values. The authors are careful to acknowledge that alternative means for estimating earthquake recurrence - and for other components of the source and ground motion characterization - also exist, and that this work is only one approach for characterizing hazard in the region.
 }
 
 \comment{1}{%
-Pp3, Line 71: A short, summary description of previous source models would highlight the contribution of this work. In particular, summary details of the work by Khodaverdian et al should be included to indicate how the approach of the authors differs from previous work. 
+Pp3, Line 71: A short, summary description of previous source models would highlight the contribution of this work. In particular, summary details of the work by Khodaverdian et al should be included to indicate how the approach of the authors differs from previous work.
 }
 
 \response{%
-In Khodaverdian et al (2016), seismicity parameters like $b-value$ and $M_{max}$ are calculated for sites equally distributed all over the Iran on a grid 1*1 degree. Earthquake catalog for each grid point is all events within 200 km buffer zone surrounding the grid point. Whereas in this study, we assume the seismic parameters are uniform for each tectonic seismic region. 
+In Khodaverdian et al (2016), seismicity parameters like $b$-value and $M_{\max}$ are calculated for sites equally distributed all over the Iran on a grid 1*1 degree. Earthquake catalog for each grid point is all events within 200 km buffer zone surrounding the grid point. Whereas in this study, we assume the seismic parameters are uniform for each tectonic seismic region. 
 }
 
 \comment{2}{%
-Pp 3, line 77: Fault-based/geologic-based earthquake recurrence estimates 
+Pp 3, line 77: Fault-based/geologic-based earthquake recurrence estimates
 }
 
 \response{%
@@ -66,7 +66,7 @@ Pp7-8: Discussion about identifying the completeness level of the earthquake cat
 }
 
 \response{%
-You are right. We used both methods in the study. First we compute the $b-value$ and $M_{max}$ for each region, or the uniform model using the HA3 package written by Dr. Kijko. $M_c$ is used as an input in the software to get accurate results. We computed the smoothed seismic hazard using the Seiskit package, written by Dr. Frankel. In estimating the seismic hazard, specifically $a-value$, we need to define a start year of completeness for each magnitude range. We modified the text to clarify the statement. 
+You are right. We used both methods in the study. First we compute the $b-value$ and $M_{max}$ for each region, or the uniform model using the HA3 package written by Dr. Kijko. $M_c$ is used as an input in the software to get accurate results. We computed the smoothed seismic hazard using the Seiskit package, written by Dr. Frankel. In estimating the seismic hazard, specifically $a-value$, we need to define a start year of completeness for each magnitude range. We modified the text to clarify the statement.
 }
 
 \comment{6}{%
@@ -74,12 +74,12 @@ Pp7-8: The authors should note that some authors use an alternative smoothing ke
 }
 
 \response{%
-Added. Thanks. 
+Added. Thanks.
 }
 
 
 \comment{7}{%
-Pp7-8: In addition to the Mirzaei et al. (1997) reference, some authors employ likelihood testing of smoothed seismicity rate models to identify optimal smoothing lengths for adaptive and fixed smoothed seismicity methods (e.g., Werner et al., 2011; Moschetti, 2015). 
+Pp7-8: In addition to the Mirzaei et al. (1997) reference, some authors employ likelihood testing of smoothed seismicity rate models to identify optimal smoothing lengths for adaptive and fixed smoothed seismicity methods (e.g., Werner et al., 2011; Moschetti, 2015).
 }
 
 \response{%
@@ -110,7 +110,7 @@ Pp 14, line 391 The incorporation of smaller earthquakes $(M<5)$ will have a sig
 }
 
 \response{%
-Thanks for the comment. We computed hazard for events $M_w > 4.5$ and modified the text. 
+Thanks for the comment. We computed hazard for events $M_w > 4.5$ and modified the text.
 }
 
 \comment{10}{%
@@ -118,7 +118,7 @@ Figure 7: Is the magnitude-frequency distribution just a truncated (Mmin, Mmax) 
 }
 
 \response{%
-Yes it is truncated GR model. 
+Yes it is truncated GR model.
 }
 
 \comment{11}{%
@@ -126,7 +126,7 @@ Pp 12, line 345: "... controls the spatial extent to which the local occurrence 
 }
 
 \response{%
-Thanks. Modified it. 
+Thanks. Modified it.
 }
 
 \comment{12}{%
@@ -150,13 +150,13 @@ Thanks for the informative comment. In Figure 10, we combined the regional (R) a
 \begin{center}
 	\bf
 	\large
-	Authors' Response to Reviewer 2 
+	Authors' Response to Reviewer 2
 	\end{center}
 
 \noindent
 We thank the reviewer for his comments and suggestions, which helped us improve the manuscript. To help the review process, in the annotated manuscript version of the paper, we have highlighted the changes that resulted from these comments in green colored font when appropriate. In the following, we provide a response to each comment. The original comments are in italic black font, followed by our responses in regular blue font.
 \vspace{2ex}
-\newline 
+\newline
 
 \introcomment{~}{%
 Review of Seismic Hazard Estimation of Northern Iran Using Smoothed Seismicity by Naeem Khoshnevis, Ricardo Taborda, Shima Azizzadeh-Roodpish, and Chris H. Cramer
@@ -170,7 +170,7 @@ In this paper, the researchers present a new seismic hazard analysis of northern
 The authors present uncertainty in their hazard estimate but do not include a more exhaustive logic tree analysis. Effectively, they have two branches: a regional model and uniform model. It appears that they apply the aleatory uncertainty in the ground motion prediction relation to a form of epistemic uncertainty, effectively double counting this uncertainty in the hazard analysis. I would prefer to see a more standard logic tree analysis where multiple GMPEs (or a backbone plus and minus one standard deviation) and uncertainty in a-value, b-value, and Mmax, for example, are considered. Barring this analysis, I would remove figure 10 and references to hazard uncertainty.
 }
 
-\response{Thanks for the comment.  Based on explanation of GMPEs section (please see comment no.27) we decided to define a suite of GMPE as well as plus and minus one standard deviation. We consider the epistemic uncertainty in tectonic seismic regions, $M_{max}$, $b-value$, and attenuation relationship through a standard logic tree analysis.}. 
+\response{Thanks for the comment.  Based on explanation of GMPEs section (please see comment no.27) we decided to define a suite of GMPE as well as plus and minus one standard deviation. We consider the epistemic uncertainty in tectonic seismic regions, $M_{max}$, $b-value$, and attenuation relationship through a standard logic tree analysis.}.
 
 \comment{2}{%
 While I think that the regional and uniform models are generally correct within 1.5 degrees of the border, I think that outside of this region, they may be moderately underestimating hazard by not considering sources with 200 km of their region of interest. Their buffer zone for sources is presently 50 km.
@@ -273,7 +273,7 @@ line 297 $\to$ provided below $\to$ provided in the next section
 \response{Fixed.}
 
 \comment{22}{%
-line 300 :  allows to draw information $\to$ allows one to draw information 
+line 300 :  allows to draw information $\to$ allows one to draw information
 }
 \response{Done.}
 
@@ -288,7 +288,7 @@ line 335 $\to$ Different seismic zone will not necessarily have difference value
 \response{Modified. Thanks.}
 
 \comment{25}{%
-line 337 $\to$ a means to reduce epistemic $\to$ a means to account for epistemic 
+line 337 $\to$ a means to reduce epistemic $\to$ a means to account for epistemic
 }
 \response{Done.}
 
@@ -378,7 +378,7 @@ line 458 $\to$  for 2 and 10\% ? for 2 and 10\% in 50 years
 \response{Done.}
 
 \comment{43}{%
-line 461: our results are close or within $\to$ our results are close to or within 
+line 461: our results are close or within $\to$ our results are close to or within
 }
 \response{Done.}
 
