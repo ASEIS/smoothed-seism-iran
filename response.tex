@@ -5,6 +5,8 @@
 \documentclass{article}
 
 \usepackage[review]{myreviewpckg}
+
+\usepackage{textcomp}
 \usepackage{simplemargins}
 
 \clubpenalty=10000  % Orphan - First of paragraph left behind
@@ -14,6 +16,10 @@
 
 \begin{document}
 
+% ******************************************************************
+% *************************** REVIEWER 1 ***************************
+% ******************************************************************
+
 \begin{center}
 	\bf
 	\large
@@ -21,7 +27,7 @@
 \end{center}
 
 \noindent
-We thank the reviewer for his/her comments and suggestions, which helped us improve the manuscript. To help the review process, in the annotated manuscript version of the paper, we have highlighted the changes that resulted from these comments in green colored font when appropriate. In the following, we provide a response to each comment. The original comments are in italic black font, followed by our responses in regular blue font.
+We thank the reviewer for his/her comments and suggestions, which helped us improve the manuscript. To help the review process, in the annotated manuscript version of the paper, we have highlighted the most relevant changes that resulted from these comments in green font. In the following, we provide a response to each comment. The original comments are in italic black font, followed by our responses in regular blue font.
 \vspace{2ex}
 \newline
 
@@ -30,120 +36,126 @@ The authors perform a seismic hazard analysis for northern Iran using a newly de
 }
 
 \comment{1}{%
-Pp3, Line 71: A short, summary description of previous source models would highlight the contribution of this work. In particular, summary details of the work by Khodaverdian et al should be included to indicate how the approach of the authors differs from previous work.
+Page 3, Line 71: A short, summary description of previous source models would highlight the contribution of this work. In particular, summary details of the work by Khodaverdian et al should be included to indicate how the approach of the authors differs from previous work.
 }
 
 \response{%
-In Khodaverdian et al (2016), seismicity parameters like $b$-value and $M_{\max}$ are calculated for sites equally distributed all over the Iran on a grid 1*1 degree. Earthquake catalog for each grid point is all events within 200 km buffer zone surrounding the grid point. Whereas in this study, we assume the seismic parameters are uniform for each tectonic seismic region. 
+We modified parts of the introduction as well as other sections to highlight in a more explicit manner the differences in our study with respect to other previous efforts. In the case of Khodaverdian et al (2016), the major difference is in the way the seismicity parameters $b$ and $M_{\max}$ are calculated. This is mentioned in the Introduction, and addressed with more clarity in Section 4 (page 11, line 312) and in Section (page 17, line 495). As mentioned there, the difference resides in the fact that Khodaverdian et al (2016) compute seismic parameters for grid cells of size 1\textdegree{} $\times$ 1\textdegree{}. This means the they compile earthquake catalogs for each grid point considering events within 200 km radius from the grid point, whereas we assume the seismic parameters to be uniform for each tectonic seismic region.
 }
 
 \comment{2}{%
-Pp 3, line 77: Fault-based/geologic-based earthquake recurrence estimates
+Page 3, line 77: Fault-based/geologic-based earthquake recurrence estimates
 }
 
 \response{%
-Added thanks.
+Added, thanks.
 }
 
 \comment{3}{%
-Pp 4, line 106: Should this be northwest?
+Page 4, line 106: Should this be northwest?
 }
 
 \response{%
-Fixed, Thanks.
+Yes. Fixed.
 }
 
 \comment{4}{%
-Pp 6, line 168: It would be good to add a reference for the GEM effort.
+Page 6, line 168: It would be good to add a reference for the GEM effort.
 }
 
 \response{%
-Added. Thanks.
+We do not have a direct reference to GEM but added a citation to Zare et al (2014), where the connection to GEM is mentioned explicitly.
 }
 
 \comment{5}{%
-Pp7-8: Discussion about identifying the completeness level of the earthquake catalogs is a bit confusing. Typically, one either specifies a minimum magnitude of completeness (Mc) and then tries to identify the earliest time for which events or complete; or, one specifies a year and computes the corresponding Mc. In reading the text, it appears that both methods were used. Please clarify.
+Pages 7--8: Discussion about identifying the completeness level of the earthquake catalogs is a bit confusing. Typically, one either specifies a minimum magnitude of completeness ($M_c$) and then tries to identify the earliest time for which events or complete; or, one specifies a year and computes the corresponding $M_c$. In reading the text, it appears that both methods were used. Please clarify.
 }
 
 \response{%
-You are right. We used both methods in the study. First we compute the $b-value$ and $M_{max}$ for each region, or the uniform model using the HA3 package written by Dr. Kijko. $M_c$ is used as an input in the software to get accurate results. We computed the smoothed seismic hazard using the Seiskit package, written by Dr. Frankel. In estimating the seismic hazard, specifically $a-value$, we need to define a start year of completeness for each magnitude range. We modified the text to clarify the statement.
+The new version of the Completeness sub-section now clarifies this point. The reviewer is right in that we used both methods, but we originally did not clearly explain the procedure. We first compute the $b$ and $M_{\max}$ values for each region, or the uniform model, using the HA3 package written by Dr.~Kijko. At this point, $M_c$ is used as an input to the HA3 software. We then used the Seiskit package written by Dr.~Frankel to compute the smoothed seismicity $a$-values. At this point, SeisKit uses the start year of completeness for each magnitude range. Please see changes in page 8, lines 211 and 229.
 }
 
 \comment{6}{%
-Pp7-8: The authors should note that some authors use an alternative smoothing kernel $(~exp(-(D/2*sigma)^2)$. Comparison of the smoothing length between different studies may require consideration of a $sqrt(2)$ factor.
+Pages 7--8: The authors should note that some authors use an alternative smoothing kernel $(~exp(-(D/2*sigma)^2)$. Comparison of the smoothing length between different studies may require consideration of a $sqrt(2)$ factor.
 }
 
 \response{%
-Added. Thanks.
-}
-
-
-\comment{7}{%
-Pp7-8: In addition to the Mirzaei et al. (1997) reference, some authors employ likelihood testing of smoothed seismicity rate models to identify optimal smoothing lengths for adaptive and fixed smoothed seismicity methods (e.g., Werner et al., 2011; Moschetti, 2015).
-}
-
-\response{%
-Added to the text. Thanks.
+We added a note to this effect in Section 4, and cite the work of Moschetti (2015) as an example. A complete analysis of the smoothing length and its influence on the hazard analysis, however, is out of the scope of the present study. The modifications done can be found in page 10, line 295.
 }
 
 \comment{7}{%
-Pp 9: Kagan and Jackson, 1994 should also be included in the reference list.
+Page 7--8: In addition to the Mirzaei et al (1997) reference, some authors employ likelihood testing of smoothed seismicity rate models to identify optimal smoothing lengths for adaptive and fixed smoothed seismicity methods (e.g., Werner et al., 2011; Moschetti, 2015).
 }
 
 \response{%
-Added. Thanks.
+We included a note to reflect this and added the references suggested by the reviewer. The changes can be seen in page 11, line 304.
+}
+
+\comment{7}{%
+Page 9: Kagan and Jackson (1994) should also be included in the reference list.
+}
+
+\response{%
+We added the suggested reference to the list provided in page 10, line 278.
 }
 
 \comment{8}{%
-Pp 10, line 302: " ... subjective decisions and any reasonable choice ...  " I would disagree that these are subjective decisions. My opinion is that you have applied scientific judgment. You clearly need to communicate where judgment is applied; however, \\
-- Details about the implementation of the two seismicity rate models (U, R) should be expanded. Are sub-catalogs developed for the five separate regions and then used to develop separate a-grids? Presumably, the separate rate files are then used to compute hazard curves and are summed at each location. \\
--A logic tree would be of great benefit in clarifying how the source models are combined. In particular, it would clarify the weighting from different completeness levels.\\
--Plots of seismicity rates from the R and U models would be of interest and particularly relevant given that the smoothed seismicity model is the main contribution of this work to hazard analyses for Iran.
+Page 10, line 302: ``...subjective decisions and any reasonable choice...'' I would disagree that these are subjective decisions. My opinion is that you have applied scientific judgment. You clearly need to communicate where judgment is applied; however:
+\\[5pt]
+Details about the implementation of the two seismicity rate models (U, R) should be expanded. Are sub-catalogs developed for the five separate regions and then used to develop separate a-grids? Presumably, the separate rate files are then used to compute hazard curves and are summed at each location.
+\\[5pt]
+A logic tree would be of great benefit in clarifying how the source models are combined. In particular, it would clarify the weighting from different completeness levels.
+\\[5pt]
+Plots of seismicity rates from the R and U models would be of interest and particularly relevant given that the smoothed seismicity model is the main contribution of this work to hazard analyses for Iran.
 }
 
 \response{%
-We added the logic tree to the study to consider the epistemic uncertainty, instead of giving the range of uncertainty. In practice, we define the grids for the whole region, however, estimate the $a-value$ and also the probability of exceedance for each region, separately. To do that, in each run we just provide the seismic source data ( in this case location and magnitude) for the specific region. Based on the logic tree approach we conducted 162 runs to get the results $(3 M * 3 B * 6 R(5 region+1 uniform)*3 GMPE)$.
+The reviewer was right to suggest that our original approach to present a combination of the R and U models was not the best. In the revised manuscript we have addressed this in two basic manners. First, we now provide a better explanation of the rationale behind both models and the reasons to provide a combined result. Second, we adopted the suggestion of implementing a logic tree approach in our analysis. The adopted logic tree allows us to consider the epistemic uncertainty in the defintion of the seismic zones and also allowed us to include uncertainties in the seismic parameters $b$ and $M_{\max}$. For each branch of the logic tree we assigned weights following literature recommendations and our own judgement. In total, traversing and combining the different branches meant to conduct 162 runs ( $3 M_{\max} \times 3 b \times (5 \mbox{regions} + 1 \mbox{uniform}) \times 3 \mbox{GMPE}$) to get the combined results of the 2 basic models (R and U), three values of $b$ and $M_{\max}$ and three GMPE alternatives. The associated changes can be seen in various sections of the revised manuscript, and in particular in the new Section 7 and the Results Section 8.
 }
 
 \comment{9}{%
-Pp 14, line 391 The incorporation of smaller earthquakes $(M<5)$ will have a significant influence on the hazard associated with PGA. Recent papers by Atkinson and others have demonstrated this effect. You may wish to argue that Mmin was chosen based on the expected smallest magnitude capable of causing damage.
+Page 14, line 391: The incorporation of smaller earthquakes $(M<5)$ will have a significant influence on the hazard associated with PGA. Recent papers by Atkinson and others have demonstrated this effect. You may wish to argue that $M_{\min}$ was chosen based on the expected smallest magnitude capable of causing damage.
 }
 
 \response{%
-Thanks for the comment. We computed hazard for events $M_w > 4.5$ and modified the text.
+We revised the computations and now present results for events with $M_w > 4.5$. The text was modified accordingly (see page 4, line 94).
 }
 
 \comment{10}{%
-Figure 7: Is the magnitude-frequency distribution just a truncated (Mmin, Mmax) GR model? Figure 7 suggests that the MFD may be tapered?
+Figure 7: Is the magnitude-frequency distribution just a truncated ($M_{\min}$, $M_{\max}$) Gutenberg-Richter model? Figure 7 suggests that the MFD may be tapered?
 }
 
 \response{%
-Yes it is truncated GR model.
+Yes, it is truncated Gutenberg-Richter model. We now make this explicit in the caption of the figure.
 }
 
 \comment{11}{%
-Pp 12, line 345: "... controls the spatial extent to which the local occurrence of earthquakes ..." I would argue that the smoothed seismicity controls the local occurrence and spatial distribution of earthquakes and that the GMPEs control the intensity level at a particular site given earthquake locations and magnitudes from your source model.
+Page 12, line 345: ``...controls the spatial extent to which the local occurrence of earthquakes...'' I would argue that the smoothed seismicity controls the local occurrence and spatial distribution of earthquakes and that the GMPEs control the intensity level at a particular site given earthquake locations and magnitudes from your source model.
 }
 
 \response{%
-Thanks. Modified it.
+That is correct. We have modified this sentence accordingly. Please se changes in page 13, line 365.
 }
 
 \comment{12}{%
-Pp 13, line 361: Change "approached" to "approach" and "lead" to "led."
+Page 13, line 361: Change ``approached'' to ``approach'' and ``lead'' to ``led.''
 }
 
 \response{%
-Done.
+This part of the text was modified and the requested change may no longer apply, at least in regard to the first suggestion. Regarding the second suggestion, we do not quite agree. Although there was a typo, the way the sentence was structured, the corrected version uses ``leads'' instead.
 }
 
 \comment{13}{%
-The approach to generating Figure 10 should be clarified. It appears that the probabilistic ground motions from the R and U model are averaged and used to compute a standard deviation. The formal method for combining alternative models in PSHA is through the logic tree; this is equivalent to weighting the models in hazard (rate) space, rather than in ground motion (intensity, PGA) space. It appears that the authors have done the latter, though I may be incorrect. If this is the case, please correct. It is very reasonable to combine the R and U models to produce another alternative model. This work is not a comprehensive seismic hazard analysis, and presentation of probabilistic ground motions from the R, U and a weighted model would be reasonable goal. However, I would caution against comparing probabilistic ground motion maps with maps of seismicity because the varying b- and Mmax-values for the R model greatly complicate the comparison. As mentioned earlier, formal testing methods exist for ensuring consistency of observed earthquake locations with the smoothed seismicity models (see CSEP references, Zechar, Schorlemmer, Werner, Helmstetter, Jackson; Moschetti, 2015). Applying these methods is beyond the scope of this work, but might be recognized as a future direction.
+The approach to generating Figure 10 should be clarified. It appears that the probabilistic ground motions from the R and U model are averaged and used to compute a standard deviation. The formal method for combining alternative models in PSHA is through the logic tree; this is equivalent to weighting the models in hazard (rate) space, rather than in ground motion (intensity, PGA) space. It appears that the authors have done the latter, though I may be incorrect. If this is the case, please correct. It is very reasonable to combine the R and U models to produce another alternative model. This work is not a comprehensive seismic hazard analysis, and presentation of probabilistic ground motions from the R, U and a weighted model would be reasonable goal. However, I would caution against comparing probabilistic ground motion maps with maps of seismicity because the varying $b$- and $M_{\max}$-values for the R model greatly complicate the comparison. As mentioned earlier, formal testing methods exist for ensuring consistency of observed earthquake locations with the smoothed seismicity models (see CSEP references, Zechar, Schorlemmer, Werner, Helmstetter, Jackson; Moschetti, 2015). Applying these methods is beyond the scope of this work, but might be recognized as a future direction.
 }
 
 \response{%
-Thanks for the informative comment. In Figure 10, we combined the regional (R) and uniform (U) results (We combine the probability of exceedance, then compute the pga)  with similar weights (i.e., 0.5). The positive and negative standard deviation plots comes from GMPE+Uncertainty  and GMPE-Uncertainty. We were showing the range of variation for PGA around the median value. As we discussed before, in order to consider the epistemic uncertainty, instead of presenting the range of uncertainty, we used the logic tree approach and modified Figure 10. The weights are presented in logic tree figure.
+Thanks for the informative comment. In the original figure 10 we combined the regional (R) and uniform (U) results (i.e., we combined the probabilities of exceedance, and then computed the PGA) with similar weights (i.e., 0.5). The positive and negative standard deviation plots came from GMPE + Uncertainty and GMPE -- Uncertainty. Our original intention was to show the range of variation for PGA around the median value. However, in the revised version of the manuscript this is no longer done. The new figure corresponding to the (R,U) combined model (Fig.~12) is now the result of the complete logic tree analysis, which is a more appropriate approach to presenting the results of our analysis.
 }
+
+% ******************************************************************
+% *************************** REVIEWER 2 ***************************
+% ******************************************************************
 
 \newpage
 
@@ -154,7 +166,7 @@ Thanks for the informative comment. In Figure 10, we combined the regional (R) a
 	\end{center}
 
 \noindent
-We thank the reviewer for his comments and suggestions, which helped us improve the manuscript. To help the review process, in the annotated manuscript version of the paper, we have highlighted the changes that resulted from these comments in green colored font when appropriate. In the following, we provide a response to each comment. The original comments are in italic black font, followed by our responses in regular blue font.
+We thank the reviewer for his/her comments and suggestions, which helped us improve the manuscript. To help the review process, in the annotated manuscript version of the paper, we have highlighted the most relevant changes that resulted from these comments in green font. In the following, we provide a response to each comment. The original comments are in italic black font, followed by our responses in regular blue font.
 \vspace{2ex}
 \newline
 
